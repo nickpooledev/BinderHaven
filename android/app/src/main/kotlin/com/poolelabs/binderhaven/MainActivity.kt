@@ -1,4 +1,4 @@
-package com.example.digital_binder
+package com.poolelabs.binderhaven
 
 import io.flutter.embedding.android.FlutterActivity
 

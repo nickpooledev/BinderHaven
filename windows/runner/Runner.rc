@@ -89,13 +89,13 @@ BEGIN
     BEGIN
         BLOCK "040904e4"
         BEGIN
-            VALUE "CompanyName", "com.example" "\0"
-            VALUE "FileDescription", "digital_binder" "\0"
+            VALUE "CompanyName", "Poole Labs" "\0"
+            VALUE "FileDescription", "BinderHaven" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "digital_binder" "\0"
-            VALUE "LegalCopyright", "Copyright (C) 2026 com.example. All rights reserved." "\0"
-            VALUE "OriginalFilename", "digital_binder.exe" "\0"
-            VALUE "ProductName", "digital_binder" "\0"
+            VALUE "InternalName", "BinderHaven" "\0"
+            VALUE "LegalCopyright", "Copyright © 2026 Poole Labs. All rights reserved." "\0"
+            VALUE "OriginalFilename", "BinderHaven.exe" "\0"
+            VALUE "ProductName", "BinderHaven" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

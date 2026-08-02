@@ -1,8 +1,8 @@
-# Digital Binder
+# BinderHaven   
 
 # Development Handoff
 
-**Project:** Digital Binder
+**Project:** BinderHaven
 
 **Company:** Poole Labs
 
@@ -26,7 +26,7 @@ Development should continue from this document without re-planning previously co
 
 # Product Vision
 
-Digital Binder exists to become the definitive digital collection experience for trading card collectors.
+BinderHaven exists to become the definitive digital collection experience for trading card collectors.
 
 It is **not** an inventory application.
 
@@ -540,7 +540,7 @@ Everything must support the collecting experience.
 
 # Success Criteria
 
-Digital Binder succeeds when collectors open the application because they enjoy spending time with their collection.
+BinderHaven succeeds when collectors open the application because they enjoy spending time with their collection.
 
 Tracking is a feature.
 
@@ -584,7 +584,7 @@ Every engineering decision should support long-term maintainability.
 
 Every feature should make collecting more enjoyable.
 
-Digital Binder is intended to become the definitive digital binder experience.
+BinderHavenn is intended to become the definitive digital binder experience.
 
 Build accordingly.
-"Continue Digital Binder from Milestone 2. Treat the documentation as the source of truth. We are ready to replace the Flutter demo and build the production application foundation."
+"Continue BinderHaven from Milestone 2. Treat the documentation as the source of truth. We are ready to replace the Flutter demo and build the production application foundation."
