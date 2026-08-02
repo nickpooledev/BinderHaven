@@ -19,13 +19,3 @@ class BinderHavenApp extends StatelessWidget {
     );
   }
 }
-
-/// Temporary placeholder until Sprint 2.
-class PlaceholderHome extends StatelessWidget {
-  const PlaceholderHome({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Scaffold(body: Center(child: Text('BinderHaven')));
-  }
-}
