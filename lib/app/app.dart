@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'router/app_router.dart';
+import 'router/routes.dart';
 import 'theme/theme.dart';
 
 /// Root BinderHaven application.
@@ -11,10 +13,9 @@ class BinderHavenApp extends StatelessWidget {
     return MaterialApp(
       title: 'BinderHaven',
       debugShowCheckedModeBanner: false,
-
       theme: AppTheme.dark,
-
-      home: const PlaceholderHome(),
+      initialRoute: AppRoutes.home,
+      onGenerateRoute: AppRouter.onGenerateRoute,
     );
   }
 }
@@ -25,10 +26,6 @@ class PlaceholderHome extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-        child: Text('BinderHaven'),
-      ),
-    );
+    return const Scaffold(body: Center(child: Text('BinderHaven')));
   }
 }
