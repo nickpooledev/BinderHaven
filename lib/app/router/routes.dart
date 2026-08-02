@@ -1,6 +1,6 @@
 /// Named routes used throughout BinderHaven.
 abstract final class AppRoutes {
-  static const home = '/';
+  static const splash = '/';
 
-  static const splash = '/splash';
+  static const home = '/home';
 }

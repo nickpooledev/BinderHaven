@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../features/home/presentation/home_page.dart';
+import '../features/splash/presentation/splash_page.dart';
 import 'routes.dart';
 
 /// Centralized application routing.
@@ -9,6 +10,12 @@ class AppRouter {
 
   static Route<dynamic> onGenerateRoute(RouteSettings settings) {
     switch (settings.name) {
+      case AppRoutes.splash:
+        return MaterialPageRoute(
+          builder: (_) => const SplashPage(),
+          settings: settings,
+        );
+
       case AppRoutes.home:
         return MaterialPageRoute(
           builder: (_) => const HomePage(),
@@ -17,7 +24,7 @@ class AppRouter {
 
       default:
         return MaterialPageRoute(
-          builder: (_) => const HomePage(),
+          builder: (_) => const SplashPage(),
           settings: settings,
         );
     }

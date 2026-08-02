@@ -14,7 +14,7 @@ class BinderHavenApp extends StatelessWidget {
       title: 'BinderHaven',
       debugShowCheckedModeBanner: false,
       theme: AppTheme.dark,
-      initialRoute: AppRoutes.home,
+      initialRoute: AppRoutes.splash,
       onGenerateRoute: AppRouter.onGenerateRoute,
     );
   }
