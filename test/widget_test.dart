@@ -1,7 +1,6 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:binder_haven/main.dart';
+import 'package:binder_haven/app/app.dart';
 
 void main() {
   testWidgets('BinderHaven launches', (WidgetTester tester) async {
