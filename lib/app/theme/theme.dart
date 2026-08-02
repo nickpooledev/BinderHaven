@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'colors.dart';
+import 'typography.dart';
 
 /// Centralized application theme definitions.
 class AppTheme {
@@ -9,11 +10,12 @@ class AppTheme {
   static ThemeData get dark {
     return ThemeData(
       useMaterial3: true,
+      fontFamily: AppTypography.fontFamily,
       brightness: Brightness.dark,
 
       scaffoldBackgroundColor: AppColors.background,
 
-      colorScheme: ColorScheme.dark(
+      colorScheme: const ColorScheme.dark(
         primary: AppColors.gold,
         secondary: AppColors.goldMuted,
         surface: AppColors.surface,
