@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../features/home/presentation/home_page.dart';
+import '../features/dashboard/presentation/dashboard_page.dart';
+import '../features/shell/presentation/shell_page.dart';
 import '../features/splash/presentation/splash_page.dart';
 import 'routes.dart';
 
@@ -16,9 +17,15 @@ class AppRouter {
           settings: settings,
         );
 
-      case AppRoutes.home:
+      case AppRoutes.shell:
         return MaterialPageRoute(
-          builder: (_) => const HomePage(),
+          builder: (_) => const ShellPage(),
+          settings: settings,
+        );
+
+      case AppRoutes.dashboard:
+        return MaterialPageRoute(
+          builder: (_) => const DashboardPage(),
           settings: settings,
         );
 

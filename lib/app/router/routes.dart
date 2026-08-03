@@ -1,6 +1,6 @@
-/// Named routes used throughout BinderHaven.
+/// Centralized application routes.
 abstract final class AppRoutes {
   static const splash = '/';
-
-  static const home = '/home';
+  static const shell = '/shell';
+  static const dashboard = '/dashboard';
 }
