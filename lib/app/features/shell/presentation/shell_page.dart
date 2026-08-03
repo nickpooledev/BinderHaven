@@ -10,7 +10,7 @@ class ShellPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       backgroundColor: Color(0xFF111315),
       body: Column(
         children: [

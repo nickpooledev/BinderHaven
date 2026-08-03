@@ -1,21 +1,35 @@
 import 'package:flutter/material.dart';
 
-/// BinderHaven dashboard.
-///
-/// This widget only renders dashboard content.
-/// It does NOT own a Scaffold.
+import 'widgets/library/library_shelf.dart';
+
+/// BinderHaven Library.
 class DashboardPage extends StatelessWidget {
   const DashboardPage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Center(
-      child: Text(
-        'Dashboard',
-        style: TextStyle(
-          color: Colors.white,
-          fontSize: 42,
-          fontWeight: FontWeight.w600,
+    return const Padding(
+      padding: EdgeInsets.all(32),
+      child: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              'My Library',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 36,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+
+            SizedBox(height: 40),
+
+            LibraryShelf(
+              title: 'Collections',
+              isEmpty: true,
+            ),
+          ],
         ),
       ),
     );
