@@ -350,3 +350,4 @@ Collector Experience Over Inventory Management — Visual collection progress ta
 Progress is Rewarding — Completing a page or set should feel satisfying through thoughtful animations and feedback.
 No Fake Collections — New users begin with an empty library that they build over time.
 Supporting Features Stay Supporting — Pricing, imports, scanning, and marketplace integrations enhance the collecting experience rather than define it.
+BinderHaven Version 1 launches with support for Pokémon only. However, the application's architecture must remain game-agnostic. No core systems, domain models, services, database schemas, or UI components should be hard-coded specifically for Pokémon. Pokémon is treated as the first supported game, not the only game. Future support for Magic: The Gathering, One Piece, Yu-Gi-Oh!, Disney Lorcana, and other trading card games should require adding new game data rather than redesigning existing systems.
