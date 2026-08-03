@@ -26,10 +26,7 @@ flutter:
     - assets/branding/logos/
     - assets/branding/icons/
     - assets/branding/splash/
-    - assets/images/
-    - assets/illustrations/
-    - assets/animations/
-    - assets/mockups/
+    
 
   fonts:
     - family: Inter

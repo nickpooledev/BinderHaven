@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/branding/splash-concept.jpg" alt="BinderHaven" width="700">
+  <img src="assets/branding/splash/splash_reference.png" alt="BinderHaven" width="650">
 </p>
 
 <h1 align="center">BinderHaven</h1>
@@ -11,9 +11,9 @@
 
 <p align="center">
 
+![Flutter](https://img.shields.io/badge/Flutter-02569B?logo=flutter&logoColor=white)
+![Dart](https://img.shields.io/badge/Dart-0175C2?logo=dart&logoColor=white)
 ![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Android%20%7C%20iOS-blue)
-![Framework](https://img.shields.io/badge/Framework-Flutter-02569B?logo=flutter)
-![Language](https://img.shields.io/badge/Language-Dart-0175C2?logo=dart)
 ![Status](https://img.shields.io/badge/Status-Active%20Development-success)
 
 </p>
@@ -22,21 +22,19 @@
 
 # 📖 Overview
 
-BinderHaven is a modern cross-platform application designed to help collectors organize, browse, and manage their collections through an intuitive binder experience.
+BinderHaven is a modern cross-platform application built to help collectors organize, browse, and manage their collections through an intuitive digital binder experience.
 
-The goal is simple:
+Designed with performance, simplicity, and scalability in mind, BinderHaven provides a premium experience across desktop and mobile devices.
 
-> Build the best digital binder for collectors.
-
-BinderHaven focuses on performance, clean design, and long-term scalability while providing a premium experience across desktop and mobile devices.
+> **Our mission is simple: Build the best digital binder for collectors.**
 
 ---
 
 # ✨ Vision
 
-Collectors shouldn't have to fight their software.
+Managing a collection should feel effortless.
 
-BinderHaven is being built to make organizing and browsing collections feel effortless, whether you're managing hundreds of items or an entire archive.
+BinderHaven is being built to provide a clean, elegant, and enjoyable experience that allows collectors to focus on their collections—not the software.
 
 ---
 
@@ -46,30 +44,29 @@ BinderHaven is being built to make organizing and browsing collections feel effo
 - Material Design 3
 - Responsive desktop interface
 - Cross-platform foundation
-- Clean navigation
+- Custom branding
 - Theme support
-- Active sprint-based development
+- Sprint-based development workflow
 
 ---
 
 # 🛣 Roadmap
 
-### Foundation
+## Current Focus
 
-- ✅ Flutter Project
-- ✅ Application Shell
-- ✅ Navigation
 - 🚧 Binder Management
-
-### Planned
-
 - Collection Management
 - Search
 - Smart Filters
 - Statistics Dashboard
-- Import / Export
+
+## Planned
+
+- Import & Export
 - Cloud Synchronization
 - Backup & Restore
+- Multiple Collection Types
+- Mobile Companion Experience
 
 ---
 
@@ -77,33 +74,54 @@ BinderHaven is being built to make organizing and browsing collections feel effo
 
 | Technology | Purpose |
 |------------|---------|
-| Flutter | Cross-platform UI |
-| Dart | Application Language |
-| Material Design 3 | User Experience |
-| SQLite | Local Storage |
-| GitHub | Version Control |
+| Flutter | Cross-platform UI Framework |
+| Dart | Programming Language |
+| Material Design 3 | User Interface |
+| SQLite | Local Database |
+| GitHub | Version Control & CI/CD |
 
 ---
 
 # 📷 Preview
 
-The image above represents the design vision for BinderHaven. As development progresses, it will be replaced with screenshots from the actual application.
+The artwork above represents the visual direction of BinderHaven.
+
+As development progresses, this section will be updated with screenshots from the live application.
 
 ---
 
-# 🏗 Development
+# 🏗 Development Philosophy
 
-BinderHaven is developed using an iterative sprint workflow.
+BinderHaven is developed using an iterative sprint methodology.
 
-Every feature is designed, implemented, tested, and refined before moving to the next milestone.
+Every feature follows a consistent process:
+
+1. Planning
+2. Design
+3. Development
+4. Testing
+5. Review
+6. Release
+
+This approach keeps development predictable, maintainable, and focused on quality.
+
+---
+
+# 🎯 Goals
+
+- Deliver an exceptional collector experience
+- Build a fast and intuitive interface
+- Support desktop and mobile platforms
+- Maintain a scalable architecture
+- Ship polished, production-quality software
 
 ---
 
 # 👨‍💻 About Poole Labs
 
-Poole Labs builds modern software focused on productivity, organization, and exceptional user experience.
+Poole Labs is an independent software studio focused on building modern productivity software with thoughtful design and exceptional user experiences.
 
-BinderHaven is the flagship application currently under active development.
+BinderHaven is the flagship product currently under active development.
 
 ---
 
@@ -111,4 +129,41 @@ BinderHaven is the flagship application currently under active development.
 
 🚧 **Active Development**
 
-New features and improvements are added regularly as BinderHaven progresses toward its first public release.
+BinderHaven is under active development with regular commits, sprint milestones, and continuous improvements.
+
+---
+
+## 📅 Current Sprint
+
+**Sprint 2 — Binder Management**
+
+### Objectives
+
+- [ ] Create Binder
+- [ ] Rename Binder
+- [ ] Delete Binder
+- [ ] Local Persistence
+- [ ] Sidebar Navigation
+- [ ] Unit Testing
+
+---
+
+## 🤝 Contributing
+
+BinderHaven is currently in private active development.
+
+Public contributions will be welcomed after the first public alpha release.
+
+---
+
+## 📄 License
+
+License information will be added prior to the first public release.
+
+---
+
+<p align="center">
+
+**Developed by Poole Labs**
+
+</p>
