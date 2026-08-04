@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 
-/// The physical spine of a BinderHaven binder.
+import 'package:binder_haven/app/theme/binder_theme.dart';
+
+/// Visual spine of a BinderHaven binder.
 ///
-/// This intentionally contains NO text or logos yet.
-/// We're building the object before decorating it.
+/// Presentation-only widget. It renders the physical
+/// appearance of a binder spine and has no knowledge of
+/// the Binder domain model.
 class BinderSpine extends StatelessWidget {
   final Color accentColor;
   final String game;
@@ -19,61 +22,113 @@ class BinderSpine extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 74,
-      height: 240,
+      width: BinderTheme.spineWidth,
+      height: BinderTheme.spineHeight,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(12),
+        borderRadius:
+            BorderRadius.circular(BinderTheme.cornerRadius),
         gradient: const LinearGradient(
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
           colors: [
-            Color(0xFF35383D),
-            Color(0xFF24262A),
-            Color(0xFF1A1C1F),
+            Color(0xFF3D4046),
+            Color(0xFF2B2E33),
+            Color(0xFF1B1D20),
           ],
         ),
         border: Border.all(
-          color: const Color(0xFF474B50),
+          color: const Color(0xFF555A60),
         ),
-        boxShadow: const [
-          BoxShadow(
-            color: Colors.black54,
-            blurRadius: 18,
-            offset: Offset(4, 10),
-          ),
-        ],
+        boxShadow: BinderTheme.shadow,
       ),
-
       child: Stack(
         children: [
-          // Colored accent strip
+          // Accent strip
           Positioned(
             left: 0,
             top: 0,
             bottom: 0,
             child: Container(
-              width: 7,
+              width: BinderTheme.accentWidth,
               decoration: BoxDecoration(
                 color: accentColor,
-                borderRadius: const BorderRadius.horizontal(
-                  left: Radius.circular(12),
+                borderRadius: BorderRadius.horizontal(
+                  left: Radius.circular(
+                    BinderTheme.cornerRadius,
+                  ),
                 ),
               ),
             ),
           ),
 
-          // Faux stitching
+          // Stitching
           Positioned(
             left: 14,
-            top: 18,
-            bottom: 18,
+            top: 16,
+            bottom: 16,
             child: Container(
               width: 1,
               color: Colors.white10,
             ),
           ),
 
-          // Top highlight
+          Padding(
+            padding: BinderTheme.spinePadding,
+            child: Column(
+              crossAxisAlignment:
+                  CrossAxisAlignment.start,
+              children: [
+                Text(
+                  game.toUpperCase(),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: const TextStyle(
+                    color: Colors.white70,
+                    fontSize: 10,
+                    fontWeight: FontWeight.w700,
+                    letterSpacing: 1.2,
+                  ),
+                ),
+
+                const SizedBox(height: 10),
+
+                Expanded(
+                  child: Align(
+                    alignment: Alignment.topLeft,
+                    child: Text(
+                      setName,
+                      maxLines: 6,
+                      overflow: TextOverflow.ellipsis,
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 15,
+                        fontWeight: FontWeight.w700,
+                        height: 1.2,
+                      ),
+                    ),
+                  ),
+                ),
+
+                Container(
+                  height: 1,
+                  color: Colors.white12,
+                ),
+
+                const SizedBox(height: 8),
+
+                const Text(
+                  'COLLECTION',
+                  style: TextStyle(
+                    color: Colors.white54,
+                    fontSize: 9,
+                    fontWeight: FontWeight.w600,
+                    letterSpacing: 1.1,
+                  ),
+                ),
+              ],
+            ),
+          ),
+
           Positioned(
             top: 0,
             left: 0,

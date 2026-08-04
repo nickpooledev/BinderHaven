@@ -38,7 +38,7 @@ class LibraryShelf extends StatelessWidget {
 
             const BinderShelf(),
 
-            const SizedBox(height: 12),
+            const SizedBox(height: 2),
 
             if (binders.isEmpty)
               const EmptyLibrary()

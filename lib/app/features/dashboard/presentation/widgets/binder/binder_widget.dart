@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
 
 import 'package:binder_haven/app/domain/binder/binder.dart';
-import 'package:binder_haven/app/domain/enums/binder_color.dart';
+import 'package:binder_haven/app/domain/enums/game_colors.dart';
+import 'package:binder_haven/app/theme/binder_theme.dart';
 
 import 'parts/binder_cover.dart';
 import 'parts/binder_shadow.dart';
 import 'parts/binder_spine.dart';
 
 /// Visual representation of a Binder domain object.
+///
+/// This widget adapts the Binder domain model into the
+/// presentation widgets that render a physical binder.
 class BinderWidget extends StatelessWidget {
   final Binder binder;
 
@@ -16,33 +20,26 @@ class BinderWidget extends StatelessWidget {
     required this.binder,
   });
 
-  Color get _accentColor {
-    switch (binder.color) {
-      case BinderColor.classicBlack:
-        return Colors.red;
-
-      // Future binder colors
-      default:
-        return Colors.red;
-    }
-  }
-
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 82,
-      height: 240,
+      width: BinderTheme.width,
+      height: BinderTheme.height,
       child: Stack(
         children: [
           const BinderShadow(),
 
           Positioned(
-            left: 8,
+            left: 10,
             top: 0,
-            child: BinderSpine(
-              accentColor: _accentColor,
-              game: binder.game.displayName,
-              setName: binder.name,
+            child: SizedBox(
+              width: BinderTheme.spineWidth,
+              height: BinderTheme.spineHeight,
+              child: BinderSpine(
+                accentColor: binder.game.accentColor,
+                game: binder.game.displayName,
+                setName: binder.name,
+              ),
             ),
           ),
 
