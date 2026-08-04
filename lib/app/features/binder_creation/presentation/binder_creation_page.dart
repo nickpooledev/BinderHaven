@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 
+import 'steps/binder_style_step.dart';
 import 'steps/game_step.dart';
+import 'steps/layout_step.dart';
+import 'steps/review_step.dart';
 import 'steps/set_step.dart';
 
 class BinderCreationPage extends StatefulWidget {
@@ -15,14 +18,21 @@ class _BinderCreationPageState extends State<BinderCreationPage> {
 
   String? _selectedGame;
   String? _selectedSet;
+  int? _selectedLayout;
+  BinderStyle? _selectedStyle;
 
   void _continue() {
-    if (_currentStep == 0 && _selectedGame == null) return;
-    if (_currentStep == 1 && _selectedSet == null) return;
+    if (!_canContinue) return;
 
-    setState(() {
-      _currentStep++;
-    });
+    if (_currentStep < 4) {
+      setState(() {
+        _currentStep++;
+      });
+      return;
+    }
+
+    // TODO: Generate binder in Sprint 4
+    Navigator.pop(context);
   }
 
   void _back() {
@@ -44,8 +54,17 @@ class _BinderCreationPageState extends State<BinderCreationPage> {
       case 1:
         return _selectedSet != null;
 
-      default:
+      case 2:
+        return _selectedLayout != null;
+
+      case 3:
+        return _selectedStyle != null;
+
+      case 4:
         return true;
+
+      default:
+        return false;
     }
   }
 
@@ -71,16 +90,36 @@ class _BinderCreationPageState extends State<BinderCreationPage> {
           },
         );
 
-      default:
-        return const Center(
-          child: Text(
-            'Pocket Layout coming next...',
-            style: TextStyle(
-              fontSize: 22,
-              fontWeight: FontWeight.w600,
-            ),
-          ),
+      case 2:
+        return LayoutStep(
+          selectedLayout: _selectedLayout,
+          onSelected: (layout) {
+            setState(() {
+              _selectedLayout = layout;
+            });
+          },
         );
+
+      case 3:
+        return BinderStyleStep(
+          selectedStyle: _selectedStyle,
+          onSelected: (style) {
+            setState(() {
+              _selectedStyle = style;
+            });
+          },
+        );
+
+      case 4:
+        return ReviewStep(
+          game: _selectedGame!,
+          set: _selectedSet!,
+          layout: _selectedLayout!,
+          style: _selectedStyle!,
+        );
+
+      default:
+        return const SizedBox.shrink();
     }
   }
 
@@ -128,7 +167,11 @@ class _BinderCreationPageState extends State<BinderCreationPage> {
                   const Spacer(),
                   FilledButton(
                     onPressed: _canContinue ? _continue : null,
-                    child: const Text('Continue'),
+                    child: Text(
+                      _currentStep == 4
+                          ? 'Create Binder'
+                          : 'Continue',
+                    ),
                   ),
                 ],
               ),
