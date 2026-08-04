@@ -27,7 +27,6 @@ class DashboardPage extends StatelessWidget {
 
             LibraryShelf(
               title: 'Collections',
-              isEmpty: true,
             ),
           ],
         ),

@@ -1,42 +1,52 @@
 import 'package:flutter/material.dart';
 
+import 'package:binder_haven/app/domain/binder/binder.dart';
+import 'package:binder_haven/app/domain/enums/binder_color.dart';
+
 import 'parts/binder_cover.dart';
 import 'parts/binder_shadow.dart';
 import 'parts/binder_spine.dart';
 
-/// A complete BinderHaven binder.
-///
-/// This widget assembles all of the physical parts of a binder.
+/// Visual representation of a Binder domain object.
 class BinderWidget extends StatelessWidget {
+  final Binder binder;
+
   const BinderWidget({
     super.key,
+    required this.binder,
   });
+
+  Color get _accentColor {
+    switch (binder.color) {
+      case BinderColor.classicBlack:
+        return Colors.red;
+
+      // Future binder colors
+      default:
+        return Colors.red;
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
-    return const SizedBox(
+    return SizedBox(
       width: 82,
       height: 240,
       child: Stack(
         children: [
-          // Shadow (placeholder for now)
-          BinderShadow(),
+          const BinderShadow(),
 
-       
-
-          // Main binder spine
           Positioned(
             left: 8,
             top: 0,
             child: BinderSpine(
-              accentColor: Colors.red,
-              game: 'Pokémon',
-              setName: 'Scarlet & Violet',
+              accentColor: _accentColor,
+              game: binder.game.displayName,
+              setName: binder.name,
             ),
           ),
 
-          // Cover (placeholder for now)
-          BinderCover(),
+          const BinderCover(),
         ],
       ),
     );
