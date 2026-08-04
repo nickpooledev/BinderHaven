@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'empty_library.dart';
-import '../binder/binder.dart';
+import '../binder/binder_widget.dart';
 import '../shelf/binder_shelf.dart';
 
 /// A single shelf within the BinderHaven library.
@@ -40,15 +40,15 @@ class LibraryShelf extends StatelessWidget {
         else
           const Row(
             children: [
-              Binder(),
+              BinderWidget(),
               SizedBox(width: 8),
-              Binder(),
+              BinderWidget(),
               SizedBox(width: 8),
-              Binder(),
+              BinderWidget(),
               SizedBox(width: 8),
-              Binder(),
+              BinderWidget(),
               SizedBox(width: 8),
-              Binder(),
+              BinderWidget(),
             ],
           ),
       ],

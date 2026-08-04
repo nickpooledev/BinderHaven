@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 
+import 'package:binder_haven/app/domain/enums/game.dart';
+
 class GameStep extends StatelessWidget {
-  final String? selectedGame;
-  final ValueChanged<String> onSelected;
+  final Game? selectedGame;
+  final ValueChanged<Game> onSelected;
 
   const GameStep({
     super.key,
@@ -18,38 +20,37 @@ class GameStep extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            "Choose a Game",
+            'Choose a Game',
             style: Theme.of(context).textTheme.headlineMedium,
           ),
+
           const SizedBox(height: 8),
+
           Text(
-            "Select the game you want this binder to represent.",
+            'Select the game you want this binder to represent.',
             style: Theme.of(context).textTheme.bodyLarge,
           ),
+
           const SizedBox(height: 32),
 
           _GameCard(
-            title: "Pokémon",
-            subtitle: "Available",
-            selected: selectedGame == "pokemon",
-            enabled: true,
-            onTap: () => onSelected("pokemon"),
+            game: Game.pokemon,
+            selected: selectedGame == Game.pokemon,
+            onTap: () => onSelected(Game.pokemon),
           ),
 
           const SizedBox(height: 16),
 
-          const _GameCard(
-            title: "One Piece",
-            subtitle: "Coming Soon",
-            enabled: false,
+          _GameCard(
+            game: Game.onePiece,
+            selected: selectedGame == Game.onePiece,
           ),
 
           const SizedBox(height: 16),
 
-          const _GameCard(
-            title: "Magic: The Gathering",
-            subtitle: "Coming Soon",
-            enabled: false,
+          _GameCard(
+            game: Game.magic,
+            selected: selectedGame == Game.magic,
           ),
         ],
       ),
@@ -58,24 +59,20 @@ class GameStep extends StatelessWidget {
 }
 
 class _GameCard extends StatelessWidget {
-  final String title;
-  final String subtitle;
-  final bool enabled;
+  final Game game;
   final bool selected;
   final VoidCallback? onTap;
 
   const _GameCard({
-    required this.title,
-    required this.subtitle,
-    this.enabled = true,
-    this.selected = false,
+    required this.game,
+    required this.selected,
     this.onTap,
   });
 
   @override
   Widget build(BuildContext context) {
     return Opacity(
-      opacity: enabled ? 1.0 : .45,
+      opacity: game.enabled ? 1.0 : 0.45,
       child: Card(
         elevation: selected ? 4 : 1,
         shape: RoundedRectangleBorder(
@@ -89,7 +86,7 @@ class _GameCard extends StatelessWidget {
         ),
         child: InkWell(
           borderRadius: BorderRadius.circular(16),
-          onTap: enabled ? onTap : null,
+          onTap: game.enabled ? onTap : null,
           child: Padding(
             padding: const EdgeInsets.all(24),
             child: Row(
@@ -99,17 +96,20 @@ class _GameCard extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        title,
-                        style:
-                            Theme.of(context).textTheme.titleLarge,
+                        game.displayName,
+                        style: Theme.of(context).textTheme.titleLarge,
                       ),
+
                       const SizedBox(height: 6),
-                      Text(subtitle),
+
+                      Text(
+                        game.enabled ? 'Available' : 'Coming Soon',
+                      ),
                     ],
                   ),
                 ),
                 if (selected)
-                  const Icon(Icons.check_circle)
+                  const Icon(Icons.check_circle),
               ],
             ),
           ),

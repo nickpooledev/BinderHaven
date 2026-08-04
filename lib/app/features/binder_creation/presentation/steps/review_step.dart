@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'binder_style_step.dart';
+import 'package:binder_haven/app/domain/enums/binder_style.dart';
 
 class ReviewStep extends StatelessWidget {
   final String game;
@@ -15,19 +15,6 @@ class ReviewStep extends StatelessWidget {
     required this.layout,
     required this.style,
   });
-
-  String get _styleText {
-    switch (style) {
-      case BinderStyle.standard:
-        return 'Standard Set';
-
-      case BinderStyle.masterSet:
-        return 'Master Set';
-
-      case BinderStyle.complete:
-        return 'Complete Collection';
-    }
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -82,12 +69,16 @@ class ReviewStep extends StatelessWidget {
                     label: 'Pocket Layout',
                     value: '$layout-Pocket',
                   ),
+
                   const Divider(),
+
                   _ReviewRow(
                     label: 'Binder Style',
-                    value: _styleText,
+                    value: style.displayName,
                   ),
+
                   const Divider(),
+
                   const _ReviewRow(
                     label: 'Status',
                     value: 'Ready to Create',

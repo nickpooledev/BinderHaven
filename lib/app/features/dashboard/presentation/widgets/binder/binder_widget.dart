@@ -7,8 +7,8 @@ import 'parts/binder_spine.dart';
 /// A complete BinderHaven binder.
 ///
 /// This widget assembles all of the physical parts of a binder.
-class Binder extends StatelessWidget {
-  const Binder({
+class BinderWidget extends StatelessWidget {
+  const BinderWidget({
     super.key,
   });
 

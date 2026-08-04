@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-
+import 'package:binder_haven/app/application/binder/create_binder_use_case.dart';
+import 'package:binder_haven/app/domain/enums/game.dart';
+import 'package:binder_haven/app/domain/enums/pocket_layout.dart';
+import 'package:binder_haven/app/domain/enums/binder_style.dart';
 import 'steps/binder_style_step.dart';
 import 'steps/game_step.dart';
 import 'steps/layout_step.dart';
@@ -16,9 +19,9 @@ class BinderCreationPage extends StatefulWidget {
 class _BinderCreationPageState extends State<BinderCreationPage> {
   int _currentStep = 0;
 
-  String? _selectedGame;
+  Game? _selectedGame;
   String? _selectedSet;
-  int? _selectedLayout;
+  PocketLayout? _selectedLayout;
   BinderStyle? _selectedStyle;
 
   void _continue() {
@@ -31,8 +34,14 @@ class _BinderCreationPageState extends State<BinderCreationPage> {
       return;
     }
 
-    // TODO: Generate binder in Sprint 4
-    Navigator.pop(context);
+    CreateBinderUseCase.execute(
+  game: _selectedGame!,
+  setId: _selectedSet!,
+  layout: _selectedLayout!,
+  style: _selectedStyle!,
+);
+
+Navigator.pop(context);
   }
 
   void _back() {
@@ -112,9 +121,9 @@ class _BinderCreationPageState extends State<BinderCreationPage> {
 
       case 4:
         return ReviewStep(
-          game: _selectedGame!,
+          game: _selectedGame!.displayName,
           set: _selectedSet!,
-          layout: _selectedLayout!,
+          layout: _selectedLayout!.pocketsPerPage,
           style: _selectedStyle!,
         );
 

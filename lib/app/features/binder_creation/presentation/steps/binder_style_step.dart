@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
 
-enum BinderStyle {
-  standard,
-  masterSet,
-  complete,
-}
+import 'package:binder_haven/app/domain/enums/binder_style.dart';
 
 class BinderStyleStep extends StatelessWidget {
   final BinderStyle? selectedStyle;
@@ -27,53 +23,45 @@ class BinderStyleStep extends StatelessWidget {
             'Choose Binder Style',
             style: Theme.of(context).textTheme.headlineMedium,
           ),
+
           const SizedBox(height: 8),
+
           Text(
             'How would you like to build this binder?',
             style: Theme.of(context).textTheme.bodyLarge,
           ),
+
           const SizedBox(height: 24),
 
           Expanded(
             child: ListView(
-              children: [
-                _StyleTile(
-                  icon: Icons.menu_book_rounded,
-                  title: 'Standard Set',
-                  description:
-                      'One copy of every numbered card in the set.',
-                  selected:
-                      selectedStyle == BinderStyle.standard,
-                  onTap: () =>
-                      onSelected(BinderStyle.standard),
-                ),
+              children: BinderStyle.values.map((style) {
+                IconData icon;
 
-                const SizedBox(height: 16),
+                switch (style) {
+                  case BinderStyle.standard:
+                    icon = Icons.menu_book_rounded;
+                    break;
 
-                _StyleTile(
-                  icon: Icons.auto_awesome,
-                  title: 'Master Set',
-                  description:
-                      'Every numbered card plus reverse holos and required variants.',
-                  selected:
-                      selectedStyle == BinderStyle.masterSet,
-                  onTap: () =>
-                      onSelected(BinderStyle.masterSet),
-                ),
+                  case BinderStyle.master:
+                    icon = Icons.auto_awesome;
+                    break;
 
-                const SizedBox(height: 16),
+                  case BinderStyle.variants:
+                    icon = Icons.workspace_premium;
+                    break;
+                }
 
-                _StyleTile(
-                  icon: Icons.workspace_premium,
-                  title: 'Complete Collection',
-                  description:
-                      'Every available printing and variation.',
-                  selected:
-                      selectedStyle == BinderStyle.complete,
-                  onTap: () =>
-                      onSelected(BinderStyle.complete),
-                ),
-              ],
+                return Padding(
+                  padding: const EdgeInsets.only(bottom: 16),
+                  child: _StyleTile(
+                    icon: icon,
+                    style: style,
+                    selected: selectedStyle == style,
+                    onTap: () => onSelected(style),
+                  ),
+                );
+              }).toList(),
             ),
           ),
         ],
@@ -84,15 +72,13 @@ class BinderStyleStep extends StatelessWidget {
 
 class _StyleTile extends StatelessWidget {
   final IconData icon;
-  final String title;
-  final String description;
+  final BinderStyle style;
   final bool selected;
   final VoidCallback onTap;
 
   const _StyleTile({
     required this.icon,
-    required this.title,
-    required this.description,
+    required this.style,
     required this.selected,
     required this.onTap,
   });
@@ -133,12 +119,13 @@ class _StyleTile extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    title,
-                    style:
-                        Theme.of(context).textTheme.titleLarge,
+                    style.displayName,
+                    style: Theme.of(context).textTheme.titleLarge,
                   ),
+
                   const SizedBox(height: 6),
-                  Text(description),
+
+                  Text(style.description),
                 ],
               ),
             ),
@@ -146,8 +133,7 @@ class _StyleTile extends StatelessWidget {
             if (selected)
               Icon(
                 Icons.check_circle,
-                color:
-                    Theme.of(context).colorScheme.primary,
+                color: Theme.of(context).colorScheme.primary,
               ),
           ],
         ),

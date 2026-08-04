@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 
+import 'package:binder_haven/app/domain/enums/pocket_layout.dart';
+
 class LayoutStep extends StatelessWidget {
-  final int? selectedLayout;
-  final ValueChanged<int> onSelected;
+  final PocketLayout? selectedLayout;
+  final ValueChanged<PocketLayout> onSelected;
 
   const LayoutStep({
     super.key,
@@ -21,52 +23,49 @@ class LayoutStep extends StatelessWidget {
             'Choose Pocket Layout',
             style: Theme.of(context).textTheme.headlineMedium,
           ),
+
           const SizedBox(height: 8),
+
           Text(
             'Match the layout of your physical binder.',
             style: Theme.of(context).textTheme.bodyLarge,
           ),
+
           const SizedBox(height: 24),
 
           Expanded(
             child: ListView(
-              children: [
-                _LayoutTile(
-                  pockets: 4,
-                  rows: 2,
-                  columns: 2,
-                  subtitle: 'Great for premium collections',
-                  selected: selectedLayout == 4,
-                  onTap: () => onSelected(4),
-                ),
-                const SizedBox(height: 16),
-                _LayoutTile(
-                  pockets: 9,
-                  rows: 3,
-                  columns: 3,
-                  subtitle: 'The classic collector layout',
-                  selected: selectedLayout == 9,
-                  onTap: () => onSelected(9),
-                ),
-                const SizedBox(height: 16),
-                _LayoutTile(
-                  pockets: 12,
-                  rows: 3,
-                  columns: 4,
-                  subtitle: 'Higher capacity pages',
-                  selected: selectedLayout == 12,
-                  onTap: () => onSelected(12),
-                ),
-                const SizedBox(height: 16),
-                _LayoutTile(
-                  pockets: 16,
-                  rows: 4,
-                  columns: 4,
-                  subtitle: 'Maximum capacity',
-                  selected: selectedLayout == 16,
-                  onTap: () => onSelected(16),
-                ),
-              ],
+              children: PocketLayout.values.map((layout) {
+                String subtitle;
+
+                switch (layout) {
+                  case PocketLayout.fourPocket:
+                    subtitle = 'Great for premium collections';
+                    break;
+
+                  case PocketLayout.ninePocket:
+                    subtitle = 'The classic collector layout';
+                    break;
+
+                  case PocketLayout.twelvePocket:
+                    subtitle = 'Higher capacity pages';
+                    break;
+
+                  case PocketLayout.sixteenPocket:
+                    subtitle = 'Maximum capacity';
+                    break;
+                }
+
+                return Padding(
+                  padding: const EdgeInsets.only(bottom: 16),
+                  child: _LayoutTile(
+                    layout: layout,
+                    subtitle: subtitle,
+                    selected: selectedLayout == layout,
+                    onTap: () => onSelected(layout),
+                  ),
+                );
+              }).toList(),
             ),
           ),
         ],
@@ -76,17 +75,13 @@ class LayoutStep extends StatelessWidget {
 }
 
 class _LayoutTile extends StatelessWidget {
-  final int pockets;
-  final int rows;
-  final int columns;
+  final PocketLayout layout;
   final String subtitle;
   final bool selected;
   final VoidCallback onTap;
 
   const _LayoutTile({
-    required this.pockets,
-    required this.rows,
-    required this.columns,
+    required this.layout,
     required this.subtitle,
     required this.selected,
     required this.onTap,
@@ -101,7 +96,7 @@ class _LayoutTile extends StatelessWidget {
         duration: const Duration(milliseconds: 200),
         padding: const EdgeInsets.all(20),
         decoration: BoxDecoration(
-          color: Colors.white.withValues(alpha: .04),
+          color: Colors.white.withValues(alpha: 0.04),
           borderRadius: BorderRadius.circular(18),
           border: Border.all(
             color: selected
@@ -116,10 +111,10 @@ class _LayoutTile extends StatelessWidget {
               width: 120,
               height: 120,
               child: Column(
-                children: List.generate(rows, (_) {
+                children: List.generate(layout.rows, (_) {
                   return Expanded(
                     child: Row(
-                      children: List.generate(columns, (_) {
+                      children: List.generate(layout.columns, (_) {
                         return Expanded(
                           child: Padding(
                             padding: const EdgeInsets.all(3),
@@ -137,20 +132,25 @@ class _LayoutTile extends StatelessWidget {
                 }),
               ),
             ),
+
             const SizedBox(width: 24),
+
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    '$pockets Pocket',
+                    layout.displayName,
                     style: Theme.of(context).textTheme.titleLarge,
                   ),
+
                   const SizedBox(height: 6),
+
                   Text(subtitle),
                 ],
               ),
             ),
+
             if (selected)
               Icon(
                 Icons.check_circle,
