@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'package:binder_haven/app/features/binder_creation/presentation/binder_creation_page.dart';
+
 /// Displayed when no binders exist.
 class EmptyLibrary extends StatelessWidget {
   const EmptyLibrary({super.key});
@@ -30,7 +32,7 @@ class EmptyLibrary extends StatelessWidget {
         const SizedBox(height: 10),
 
         const Text(
-          'Import your first collection to begin building BinderHaven.',
+          'Create your first binder and begin building your collection.',
           textAlign: TextAlign.center,
           style: TextStyle(
             color: Colors.white54,
@@ -41,9 +43,15 @@ class EmptyLibrary extends StatelessWidget {
         const SizedBox(height: 28),
 
         FilledButton.icon(
-          onPressed: () {},
-          icon: const Icon(Icons.upload_file),
-          label: const Text('Import Collection'),
+          onPressed: () {
+            Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (_) => const BinderCreationPage(),
+              ),
+            );
+          },
+          icon: const Icon(Icons.auto_stories_outlined),
+          label: const Text('Create Binder'),
         ),
       ],
     );
