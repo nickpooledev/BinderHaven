@@ -1,0 +1,301 @@
+# BinderHaven
+# 15_CARD_EXPERIENCE
+
+Version: 1.0
+Status: Draft
+Project: BinderHaven
+Company: Poole Labs
+
+---
+
+# Purpose
+
+The Card Experience represents the final level of interaction within BinderHaven.
+
+Every card is more than an inventory record.
+
+It is a collectible.
+
+The experience should celebrate the artwork, history, and significance of each card while providing collectors with meaningful information.
+
+---
+
+# Experience Philosophy
+
+The card is the hero.
+
+Statistics support the card.
+
+They never compete with it.
+
+The collector should always see the card before they see its metadata.
+
+BinderHaven exists to celebrate collecting.
+
+The Card Experience should reflect that philosophy.
+
+---
+
+# Emotional Objectives
+
+When opening a card, collectors should feel:
+
+• Appreciation
+
+• Curiosity
+
+• Pride
+
+• Excitement
+
+• Satisfaction
+
+The experience should encourage collectors to spend time viewing their cards rather than simply extracting information.
+
+---
+
+# Transition Philosophy
+
+Opening a card should feel like lifting it from the binder.
+
+The selected card becomes the visual focus while the surrounding interface gracefully recedes.
+
+The transition should feel connected to the Page Experience.
+
+Collectors should never feel as though they are navigating to an unrelated screen.
+
+---
+
+# Card Presentation
+
+The card should occupy the majority of the available space.
+
+The artwork should become the primary visual element.
+
+Characteristics:
+
+• Large display
+
+• High-resolution imagery
+
+• Accurate colors
+
+• Correct proportions
+
+• Minimal distractions
+
+The collector's attention should immediately focus on the artwork.
+
+---
+
+# Information Hierarchy
+
+Information should appear in the following order:
+
+1. Card
+
+2. Card Name
+
+3. Set Information
+
+4. Card Number
+
+5. Rarity
+
+6. Type
+
+7. Ownership Status
+
+8. Market Information
+
+Supporting details should remain visually secondary.
+
+---
+
+# Market Information
+
+Pricing exists to support collectors.
+
+It should never dominate the experience.
+
+Examples include:
+
+• Current Market Value
+
+• Last Updated
+
+• Price Trend
+
+Future versions may support additional pricing providers.
+
+Market information should remain contextual.
+
+BinderHaven is not a stock portfolio.
+
+---
+
+# Ownership
+
+Ownership information should clearly communicate the collector's relationship with the card.
+
+Examples:
+
+• Owned
+
+• Missing
+
+• Wishlist
+
+• Duplicate
+
+• Graded
+
+• Favorite
+
+Status should remain informative without overwhelming the interface.
+
+---
+
+# Artwork First
+
+Artwork is central to the collecting experience.
+
+Whenever possible, the artwork should receive more visual emphasis than statistics.
+
+Collectors should feel encouraged to appreciate the illustration as much as the card itself.
+
+---
+
+# Card Actions
+
+Common actions may include:
+
+• View Details
+
+• Mark Owned
+
+• Mark Missing
+
+• Add Notes
+
+• Add to Wishlist
+
+• View Market Information
+
+• Share
+
+Actions should remain easily accessible without interrupting appreciation of the card.
+
+---
+
+# Card Details
+
+Supporting information may include:
+
+• Artist
+
+• Set
+
+• Release Date
+
+• Language
+
+• Finish
+
+• Variants
+
+• Product Source
+
+• Collection Notes
+
+Information should remain organized and easy to browse.
+
+---
+
+# Motion Philosophy
+
+Cards should feel lightweight yet tangible.
+
+Animations should communicate care.
+
+Possible interactions include:
+
+• Gentle lift
+
+• Soft shadow
+
+• Smooth transitions
+
+• Subtle parallax
+
+Motion should enhance realism without becoming distracting.
+
+---
+
+# Session Persistence
+
+When returning from Card Detail, collectors should return to:
+
+• The same binder
+
+• The same page
+
+• The same scroll position
+
+The transition should feel seamless.
+
+---
+
+# Accessibility
+
+Artwork should remain viewable at larger sizes.
+
+Typography should remain readable.
+
+Interactive controls should remain accessible across supported devices.
+
+Reduced Motion settings should provide simplified transitions.
+
+---
+
+# Future Enhancements
+
+Future releases may introduce:
+
+• Grading information
+
+• Scan comparison
+
+• AI-assisted card identification
+
+• Collection history
+
+• Price history
+
+• Personal notes
+
+• Card achievements
+
+• Alternate artwork viewer
+
+These additions should extend the experience without reducing clarity.
+
+---
+
+# Success Criteria
+
+A successful Card Experience should:
+
+• Celebrate the artwork
+
+• Reinforce ownership
+
+• Present information clearly
+
+• Feel connected to the binder
+
+• Encourage exploration
+
+• Scale naturally as features expand
+
+If collectors open a card simply to admire it—not because they need information—the design has succeeded.

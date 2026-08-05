@@ -1,0 +1,363 @@
+# BinderHaven
+# 12_LIBRARY_EXPERIENCE
+
+Version: 1.0
+Status: Draft
+Project: BinderHaven
+Company: Poole Labs
+
+---
+
+# Purpose
+
+The Library is the heart of BinderHaven.
+
+It is more than a list of collections.
+
+It is the collector's personal gallery.
+
+Every visit to BinderHaven begins here.
+
+The Library should immediately communicate ownership, progress, and pride while encouraging collectors to continue building their collections.
+
+Collectors should enjoy spending time in the Library even when they are not actively managing cards.
+
+---
+
+# Experience Philosophy
+
+The Library should never feel like inventory software.
+
+It should never resemble a spreadsheet.
+
+It should never overwhelm the collector with statistics.
+
+Instead, it should recreate the feeling of standing in front of a personal collection.
+
+Every binder represents an achievement.
+
+Every collection tells a story.
+
+The Library exists to celebrate those stories.
+
+---
+
+# Emotional Objectives
+
+When a collector opens BinderHaven they should immediately think:
+
+• This feels different.
+
+• This feels premium.
+
+• This doesn't look like every other collection app.
+
+• I want to open one of these binders.
+
+The Library should create curiosity before interaction.
+
+---
+
+# Layout Philosophy
+
+The Library is intentionally simple.
+
+Collectors browse binders—not lists.
+
+The default layout consists of:
+
+• Two binders per row
+
+• Vertical scrolling
+
+• Generous spacing
+
+• Large binder covers
+
+The binders are always the primary visual element.
+
+Nothing should compete for attention.
+
+---
+
+# Wallpaper Philosophy
+
+The wallpaper establishes the atmosphere of the Library.
+
+It creates mood without distracting from the binders.
+
+The wallpaper is not decoration.
+
+It is environmental design.
+
+---
+
+# Default Wallpapers
+
+BinderHaven includes a curated collection of professionally designed wallpapers.
+
+Examples include:
+
+• Minimal gradients
+
+• Nature landscapes
+
+• Dark premium textures
+
+• Collector-inspired environments
+
+• Seasonal collections
+
+Every wallpaper should complement binder covers rather than compete with them.
+
+---
+
+# Personal Wallpapers
+
+Collectors may choose their own wallpapers.
+
+Examples include:
+
+• Personal photography
+
+• Family photos
+
+• Landscapes
+
+• Abstract artwork
+
+• Licensed artwork they own the rights to use
+
+To maintain readability, BinderHaven may automatically apply subtle visual treatments such as:
+
+• Blur
+
+• Dark overlays
+
+• Brightness adjustment
+
+• Reduced saturation
+
+The objective is to preserve binder visibility regardless of wallpaper selection.
+
+---
+
+# Wallpaper Principle
+
+The wallpaper sets the mood.
+
+The binders own the attention.
+
+---
+
+# Binder Presentation
+
+Binders are displayed as premium physical objects.
+
+Each binder should communicate:
+
+• Collection name
+
+• Completion percentage
+
+• Cards owned
+
+• Cards remaining
+
+• Current Set Value
+
+The binder itself remains the hero.
+
+Information should support the object rather than dominate it.
+
+---
+
+# Information Hierarchy
+
+Information should always appear in the following priority:
+
+1. Collection Name
+
+2. Completion Percentage
+
+3. Cards Owned
+
+4. Cards Remaining
+
+5. Current Set Value
+
+Example:
+
+Pokémon Base Set
+
+82% Complete
+
+643 / 780 Cards
+
+137 Remaining
+
+Current Set Value
+
+$2,438.17
+
+Progress should always receive greater visual emphasis than monetary value.
+
+BinderHaven celebrates collecting—not investing.
+
+---
+
+# Header
+
+The Library intentionally avoids personal greetings.
+
+Examples such as:
+
+"Good Morning"
+
+"Welcome Back"
+
+"Happy Collecting"
+
+should not appear.
+
+Instead, the experience begins with a simple title.
+
+Library
+
+The focus immediately shifts to the collector's binders.
+
+---
+
+# Navigation Philosophy
+
+Navigation should feel integrated into the BinderHaven identity.
+
+Rather than relying exclusively on traditional bottom navigation, BinderHaven explores a persistent navigation rail positioned along the left edge of the interface.
+
+This navigation becomes a recognizable element of the product and subtly reinforces the physical inspiration of a binder spine.
+
+The navigation should remain minimal, elegant, and unobtrusive.
+
+It should support the experience without competing for attention.
+
+---
+
+# Spacing Philosophy
+
+Whitespace should be intentional.
+
+The Library should breathe.
+
+Spacing should:
+
+• Improve readability
+
+• Increase perceived quality
+
+• Draw attention toward binders
+
+Whitespace exists to elevate the collecting experience—not simply to create empty space.
+
+---
+
+# Visual Hierarchy
+
+Collectors should notice elements in this order:
+
+Wallpaper
+
+↓
+
+Binder Covers
+
+↓
+
+Collection Names
+
+↓
+
+Progress
+
+↓
+
+Supporting Statistics
+
+↓
+
+Navigation
+
+Every design decision should reinforce this hierarchy.
+
+---
+
+# Motion Philosophy
+
+Scrolling should feel smooth and calm.
+
+Binders should appear stable and substantial.
+
+Interactions should communicate weight and physical presence.
+
+Animations should never distract from collecting.
+
+The Library should feel confident rather than energetic.
+
+---
+
+# Recognition
+
+The Library should become instantly recognizable.
+
+If someone sees a screenshot online, they should recognize BinderHaven before reading the title.
+
+Recognition should come from:
+
+• Premium binder presentation
+
+• Calm visual hierarchy
+
+• Wallpaper treatment
+
+• Navigation
+
+• Overall composition
+
+Not logos.
+
+Not branding.
+
+---
+
+# Accessibility
+
+The Library should remain readable across all supported wallpapers.
+
+Text should always maintain sufficient contrast.
+
+Interactive elements should remain comfortably reachable.
+
+Large binder covers should remain visually distinguishable for all users.
+
+Customization should never reduce usability.
+
+---
+
+# Success Criteria
+
+A successful Library experience should:
+
+• Feel unlike traditional collection apps
+
+• Encourage collectors to spend time browsing
+
+• Celebrate collection progress
+
+• Make every binder feel valuable
+
+• Support personalization without sacrificing clarity
+
+• Scale naturally as collections grow
+
+• Become one of the defining experiences of BinderHaven
+
+If collectors enjoy opening BinderHaven simply to admire their Library, the design has succeeded.
