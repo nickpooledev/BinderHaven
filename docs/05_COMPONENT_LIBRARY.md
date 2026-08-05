@@ -1,316 +1,254 @@
-# Digital Binder
+# BinderHaven
 
 # Component Library
 
-Version 1.0
+Version: 2.0
+Status: Active
+Owner: Poole Labs
 
 ---
 
 # Purpose
 
-The Component Library defines every reusable user interface component used throughout Digital Binder.
+The Component Library defines the major product components that make up BinderHaven.
 
-The objective is simple:
+These components represent the building blocks of the user experience—not individual Flutter widgets.
 
-Build each component once.
+Every screen within BinderHaven should be assembled from these product components.
 
-Reuse it everywhere.
+This document exists to promote consistency, reuse, scalability, and maintainability.
 
-Every component should have a single responsibility, a consistent appearance, predictable behavior, and support future expansion.
-
-Whenever possible, new screens should be assembled from existing components rather than creating new ones.
-
-This ensures consistency, improves maintainability, and creates a premium user experience.
+As BinderHaven evolves, new components may be added, existing components may expand, and some components may be retired.
 
 ---
 
-# Component Naming Convention
+# Component Philosophy
 
-Every reusable component receives a unique identifier.
+Components are experiences.
 
-Examples:
+Not widgets.
 
-DB-001
+Each component should have:
 
-DB-002
+• One responsibility
 
-DB-003
+• A clear purpose
 
-This identifier should remain permanent even if the component evolves.
+• Predictable behavior
 
----
+• Consistent appearance
 
-# Component Categories
+• Defined relationships
 
-## Navigation
-
-• Bookshelf
-
-• Bottom Navigation
-
-• Top App Bar
-
-• Search Bar
-
-• Drawer
-
-• Floating Action Button
+A component should solve one problem well.
 
 ---
 
-## Binder
+# Component Hierarchy
 
-• Binder
+BinderHaven is constructed from reusable product components.
 
-• Binder Spine
+```
+Application
 
-• Binder Cover
+    Library
 
-• Binder Ribbon
+        Binder
 
-• Binder Shadow
+            Binder Cover
 
-• Binder Label
+            Binder Metadata
 
----
+            Progress
 
-## Pages
+            Status Indicators
 
-• Binder Page
+        Collection
 
-• Pocket Grid
+            Binder Pages
 
-• Pocket
+                Pocket Grid
 
-• Page Number Indicator
+                    Pocket
 
-• Page Header
+                        Trading Card
 
----
+                            Card Details
 
-## Cards
+    Search
 
-• Trading Card
+    Scanner
 
-• Missing Card Placeholder
+    Settings
 
-• Card Detail Dialog
+    Dialogs
+```
 
-• Card Badge
-
-• Card Counter
-
-• Variant Indicator
+Each layer builds upon the one beneath it.
 
 ---
 
-## Progress
+# Core Product Components
 
-• Progress Ring
-
-• Progress Bar
-
-• Completion Badge
-
-• Collection Percentage
+The following components define the BinderHaven experience.
 
 ---
 
-## Statistics
-
-• Statistic Card
-
-• Dashboard Tile
-
-• Summary Widget
-
-• Achievement Counter
-
----
-
-## Dialogs
-
-• Confirmation Dialog
-
-• Information Dialog
-
-• Bottom Sheet
-
-• Action Menu
-
----
-
-## Profile
-
-• Collector Avatar
-
-• Collector Banner
-
-• Collector Level
-
-• XP Progress
-
-• Trophy Display
-
----
-
-## Collection Room
-
-• Bookshelf
-
-• Shelf
-
-• Display Case
-
-• Trophy Cabinet
-
-• Room Decoration
-
----
-
-# Component Specification Template
-
-Every reusable component should follow this structure.
-
----
-
-## Component Name
-
-Component ID
+# Library
 
 Purpose
 
-Description
+The Library is the application's home.
 
-Primary Use Cases
+It presents every collection owned by the collector.
 
-Properties
+Responsibilities
 
-States
+• Display binders
 
-Animations
+• Support browsing
 
-Accessibility
+• Searching
 
-Future Enhancements
+• Filtering
 
----
+• Sorting
 
-# Example
+• Wallpaper presentation
 
----
-
-## DB-001
-
-Bookshelf Widget
-
-Purpose
-
-Displays every binder owned by the collector.
-
-Description
-
-The Bookshelf is the application's primary navigation screen.
-
-Collectors interact with binders exactly as they would on a physical shelf.
-
-Properties
-
-• Shelf Theme
-
-• Number of Shelves
-
-• Scroll Position
-
-• Display Density
-
-States
-
-• Empty
-
-• Loading
-
-• Populated
-
-• Editing
-
-Animations
-
-• Shelf Fade
-
-• Binder Hover
-
-• Binder Lift
-
-• Shelf Scroll
-
-Accessibility
-
-Supports:
-
-• Screen readers
-
-• Reduced motion
-
-• Large text
+• Collection organization
 
 Future
 
-Support customizable shelf layouts.
+Library layouts may evolve without changing the underlying product philosophy.
 
 ---
 
-## DB-002
-
-Binder Widget
+# Binder
 
 Purpose
 
-Represents a single binder.
+Represents an individual collection.
 
-Behavior
+The Binder is the emotional centerpiece of BinderHaven.
 
-Displays:
+Responsibilities
 
-• Cover
+• Visual identity
 
-• Spine
+• Collection representation
 
-• Completion Ribbon
+• Progress
 
-• Completion %
+• Customization
 
-• Set Logo
-
-Interaction
-
-Tap
-
-Binder slides from shelf.
-
-Rotates.
-
-Opens.
-
-Displays first page.
+• Opening interaction
 
 Future
 
-Support custom covers.
+Support:
 
-Animated materials.
+• Binder themes
 
-Different binder styles.
+• Materials
+
+• Licensed appearances
+
+• Custom personalization
 
 ---
 
-## DB-003
-
-Pocket Widget
+# Binder Cover
 
 Purpose
 
-Represents a single binder pocket.
+Provide the visual identity of a binder.
+
+Displays
+
+• Collection Name
+
+• Optional Theme
+
+• Progress
+
+• Favorite Status
+
+The Binder Cover should remain simple and timeless.
+
+---
+
+# Binder Metadata
+
+Purpose
+
+Display essential information.
+
+Examples
+
+Collection Name
+
+Game
+
+Completion %
+
+Cards Owned
+
+Cards Remaining
+
+Metadata should support the binder.
+
+Never overpower it.
+
+---
+
+# Binder Page
+
+Purpose
+
+Represent one physical page within a binder.
+
+Responsibilities
+
+Display pockets.
+
+Support page turning.
+
+Support page navigation.
+
+Provide completion feedback.
+
+Future
+
+Support multiple layouts.
+
+---
+
+# Pocket Grid
+
+Purpose
+
+Arrange pockets according to the selected binder layout.
+
+Examples
+
+4 Pocket
+
+9 Pocket
+
+12 Pocket
+
+16 Pocket
+
+Pocket layouts should remain interchangeable.
+
+---
+
+# Pocket
+
+Purpose
+
+Represent one physical binder pocket.
 
 States
 
@@ -318,109 +256,327 @@ Owned
 
 Missing
 
-Favorite
+Reserved
 
 Wishlist
 
 Duplicate
 
-Animation
+Future
 
-Card slides into pocket.
+Animated insertion.
 
-Subtle scale animation.
+Ownership effects.
 
-Light haptic feedback.
+Completion highlights.
 
 ---
 
-## DB-004
-
-Trading Card Widget
+# Trading Card
 
 Purpose
 
-Displays a card.
+Display a single card.
 
-Properties
+Responsibilities
 
-Image
+Artwork
+
+Ownership
+
+Variant Status
+
+Card Details
+
+Cards are always the primary visual element.
+
+---
+
+# Card Details
+
+Purpose
+
+Present complete information about a card.
+
+Examples
+
+Card Image
 
 Name
 
 Number
 
-Rarity
+Illustrator
 
-Favorite
+Rarity
 
 Variants
 
-States
-
-Owned
-
-Missing
-
-Selected
-
-Disabled
-
-Animation
-
-Gentle lift.
-
-Shadow increase.
+Collection Notes
 
 Future
 
-3D card tilt.
+Grading
 
-Foil effects.
+Pricing
+
+Purchase Links
 
 ---
 
-## DB-005
-
-Progress Ring
+# Progress
 
 Purpose
 
-Displays collection completion.
+Motivate collectors.
 
-Used throughout the application.
+Progress is not merely statistical information.
 
-Examples
+Progress represents achievement.
 
-Set completion
+Displayed Information
 
-Binder completion
+Completion %
 
-Collection completion
+Cards Owned
 
-Animation
+Cards Remaining
 
-Animated progress fill.
+Pages Completed
 
-Completion sparkle.
+Master Set Status
+
+Progress should remain visible throughout the collecting experience.
 
 ---
 
-# Component Development Rules
+# Search
 
-Before creating a new widget ask:
+Purpose
 
-Can an existing component solve this problem?
+Allow collectors to quickly locate anything within BinderHaven.
 
-If yes:
+Examples
 
-Reuse it.
+Cards
 
-If no:
+Sets
 
-Create a new reusable component.
+Collections
 
-Never duplicate functionality.
+Games
+
+Illustrators
+
+Future
+
+Natural language searching.
+
+AI-assisted searching.
+
+---
+
+# Scanner
+
+Purpose
+
+Digitize physical cards.
+
+Responsibilities
+
+Recognition
+
+Identification
+
+Collection Integration
+
+Future
+
+Batch scanning
+
+AI recognition
+
+Condition estimation
+
+---
+
+# Dialog
+
+Purpose
+
+Support focused interactions.
+
+Dialogs should simplify workflows.
+
+Never interrupt unnecessarily.
+
+---
+
+# Navigation
+
+Purpose
+
+Allow collectors to move naturally throughout BinderHaven.
+
+Navigation should always answer:
+
+Where am I?
+
+Where can I go?
+
+How do I return?
+
+---
+
+# Wallpaper
+
+Purpose
+
+Establish atmosphere.
+
+Responsibilities
+
+Support personalization.
+
+Complement collections.
+
+Maintain readability.
+
+Future
+
+User supplied wallpapers.
+
+Seasonal wallpapers.
+
+Animated wallpapers.
+
+---
+
+# Settings
+
+Purpose
+
+Allow personalization without overwhelming collectors.
+
+Examples
+
+Theme
+
+Wallpaper
+
+Animations
+
+Accessibility
+
+Collection Preferences
+
+---
+
+# Statistics
+
+Purpose
+
+Provide insights into a collection.
+
+Statistics should support collecting.
+
+Never become the primary experience.
+
+---
+
+# Future Product Components
+
+Potential future components include:
+
+Achievement System
+
+Wishlist
+
+Trade Binder
+
+Marketplace
+
+Friends
+
+Profiles
+
+Collection Sharing
+
+Community Feed
+
+Cloud Sync
+
+Collection Import
+
+AI Assistant
+
+These components remain conceptual until promoted into active development.
+
+---
+
+# Component Relationships
+
+Components should build upon one another.
+
+Example
+
+Library
+
+↓
+
+Binder
+
+↓
+
+Page
+
+↓
+
+Pocket
+
+↓
+
+Trading Card
+
+↓
+
+Card Details
+
+Higher-level components should never duplicate responsibilities handled by lower-level components.
+
+---
+
+# Component Lifecycle
+
+Every new component should progress through the following stages.
+
+Concept
+
+↓
+
+Specification
+
+↓
+
+Design Review
+
+↓
+
+Implementation
+
+↓
+
+Testing
+
+↓
+
+Production
+
+↓
+
+Maintenance
+
+No component should skip documentation.
 
 ---
 
@@ -430,80 +586,94 @@ Every component should be:
 
 Reusable
 
-Responsive
+Predictable
 
 Accessible
 
-Testable
+Responsive
+
+Performant
 
 Theme Aware
 
-Documented
+Well Documented
 
-Animated appropriately
+Easy to Understand
 
-Optimized for performance
+Future Friendly
 
 ---
 
-# Flutter Implementation
+# Component Evolution
 
-Each reusable component should live within:
+Components are expected to evolve.
 
-lib/
+Visual improvements.
 
-shared/
+Additional functionality.
 
-widgets/
+Animation.
 
-Each component should contain:
+Customization.
 
-Widget
+Accessibility.
 
-Documentation
+Performance.
 
-Unit tests
+Evolution should improve existing components rather than replace them whenever practical.
 
-Widget tests
+---
+
+# Design Responsibility
+
+Every component should contribute to the BinderHaven identity.
+
+When designing a component ask:
+
+Does it improve the collecting experience?
+
+Does it feel premium?
+
+Does it remain intuitive?
+
+Does it support customization?
+
+Does it reinforce ownership?
+
+If the answer is no, redesign it.
+
+---
+
+# Future Documentation
+
+Each major component documented here will eventually receive its own specification document.
 
 Examples
 
-Components should remain independent whenever possible.
+Binder
 
----
+Binder Page
 
-# Future Component Goals
+Trading Card
 
-As Digital Binder grows, the Component Library will expand to include:
+Pocket
 
-• Premium Themes
+Library
 
-• Seasonal Decorations
+Scanner
 
-• Animated Shelves
+Search
 
-• Interactive Trophies
-
-• Card Stack Animations
-
-• 3D Binder Covers
-
-• Dynamic Lighting
-
-• Collectible Display Cases
-
-• Marketplace Components
-
-• Community Widgets
+These documents will define implementation expectations, behaviors, visual standards, and future enhancements.
 
 ---
 
 # Final Principle
 
-Every screen inside Digital Binder should feel like it was assembled from a carefully crafted collection of premium components.
+Collectors should never think about components.
 
-Collectors should experience consistency without noticing it.
+They should simply enjoy using BinderHaven.
 
-Developers should build quickly because every foundation already exists.
+A successful Component Library disappears into the experience.
 
-The best component is one that is used hundreds of times without ever needing to be redesigned.
+Its consistency allows every part of the application to feel intentional, cohesive, and unmistakably BinderHaven.

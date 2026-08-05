@@ -1,244 +1,456 @@
-# Digital Binder
+# BinderHaven
 
 # Component Catalog
 
-Version 1.0
+Version: 2.0
+Status: Active
+Owner: Poole Labs
 
 ---
 
 # Purpose
 
-The Component Catalog serves as the master inventory of every reusable UI component within Digital Binder.
+The Component Catalog is the master registry of every major product component within BinderHaven.
 
-Each component receives a permanent identifier that is never reused or renumbered.
+Unlike the Component Library, which explains what each component is and how it behaves, the Component Catalog tracks the current state of every component throughout development.
 
-These identifiers provide a shared language between design, engineering, documentation, testing, and future contributors.
+It serves as the project's inventory.
 
-Rather than saying:
+If a component exists within BinderHaven, it should appear here.
 
-> "Let's work on the Pocket widget."
-
-Development discussions can reference:
-
-> **DB-004 – Pocket Widget**
-
-This improves communication, documentation, issue tracking, and project organization.
-
-As Digital Binder evolves, new components will simply receive the next available identifier.
-
-Existing IDs should never change.
-
----
-
-# Component Categories
-
-## Navigation Components
-
-| ID | Component | Status |
-|----|-----------|--------|
-| DB-001 | Bookshelf | Planned |
-| DB-002 | Bottom Navigation | Planned |
-| DB-003 | App Bar | Planned |
-| DB-004 | Search Bar | Planned |
-| DB-005 | Floating Action Button | Planned |
-| DB-006 | Navigation Drawer | Planned |
-
----
-
-## Binder Components
-
-| ID | Component | Status |
-|----|-----------|--------|
-| DB-010 | Binder | Planned |
-| DB-011 | Binder Cover | Planned |
-| DB-012 | Binder Spine | Planned |
-| DB-013 | Binder Ribbon | Planned |
-| DB-014 | Binder Shadow | Planned |
-| DB-015 | Binder Label | Planned |
-
----
-
-## Page Components
-
-| ID | Component | Status |
-|----|-----------|--------|
-| DB-020 | Binder Page | Planned |
-| DB-021 | Pocket Grid | Planned |
-| DB-022 | Pocket | Planned |
-| DB-023 | Page Header | Planned |
-| DB-024 | Page Footer | Planned |
-| DB-025 | Page Indicator | Planned |
-
----
-
-## Card Components
-
-| ID | Component | Status |
-|----|-----------|--------|
-| DB-030 | Trading Card | Planned |
-| DB-031 | Missing Card Placeholder | Planned |
-| DB-032 | Card Detail Dialog | Planned |
-| DB-033 | Favorite Badge | Planned |
-| DB-034 | Variant Badge | Planned |
-| DB-035 | Quantity Indicator | Planned |
-
----
-
-## Progress Components
-
-| ID | Component | Status |
-|----|-----------|--------|
-| DB-040 | Progress Ring | Planned |
-| DB-041 | Progress Bar | Planned |
-| DB-042 | Completion Badge | Planned |
-| DB-043 | Completion Ribbon | Planned |
-| DB-044 | Statistic Tile | Planned |
-
----
-
-## Collection Components
-
-| ID | Component | Status |
-|----|-----------|--------|
-| DB-050 | Collection Card | Planned |
-| DB-051 | Collection Summary | Planned |
-| DB-052 | Set Information Panel | Planned |
-| DB-053 | Collection Progress Card | Planned |
-
----
-
-## Achievement Components
-
-| ID | Component | Status |
-|----|-----------|--------|
-| DB-060 | Achievement Badge | Planned |
-| DB-061 | Trophy | Planned |
-| DB-062 | Trophy Cabinet | Planned |
-| DB-063 | XP Progress Bar | Planned |
-| DB-064 | Collector Level Card | Planned |
-
----
-
-## Profile Components
-
-| ID | Component | Status |
-|----|-----------|--------|
-| DB-070 | Collector Avatar | Planned |
-| DB-071 | Collector Banner | Planned |
-| DB-072 | Collector Statistics | Planned |
-| DB-073 | Favorite Pokémon Display | Planned |
-
----
-
-## Collection Room Components
-
-| ID | Component | Status |
-|----|-----------|--------|
-| DB-080 | Bookshelf | Planned |
-| DB-081 | Shelf | Planned |
-| DB-082 | Display Case | Planned |
-| DB-083 | Room Decoration | Planned |
-| DB-084 | Background Theme | Planned |
-
----
-
-## Dialog Components
-
-| ID | Component | Status |
-|----|-----------|--------|
-| DB-090 | Confirmation Dialog | Planned |
-| DB-091 | Information Dialog | Planned |
-| DB-092 | Bottom Sheet | Planned |
-| DB-093 | Context Menu | Planned |
-
----
-
-# Component Status
-
-Each component should always have one of the following statuses:
-
-🟦 Planned
-
-🟨 In Design
-
-🟧 In Development
-
-🟪 Testing
-
-🟩 Complete
-
-🟥 Deprecated
+If it is not listed here, it is not considered part of the product.
 
 ---
 
 # Component Lifecycle
 
-Every reusable component follows the same lifecycle:
+Every component progresses through the same lifecycle.
 
-1. Added to Component Catalog
+Concept
 
-2. Detailed within Component Library
+↓
 
-3. Designed
+Specified
 
-4. Implemented
+↓
 
-5. Tested
+Design
 
-6. Released
+↓
 
-7. Maintained
+Development
+
+↓
+
+Testing
+
+↓
+
+Released
+
+↓
+
+Maintained
+
+↓
+
+Retired (if necessary)
+
+Components should evolve rather than be replaced whenever practical.
 
 ---
 
-# Naming Convention
+# Component Status
 
-Every reusable widget inside the Flutter project should closely match its catalog entry.
+Every component should have one status.
 
-Example:
+| Status | Meaning |
+|----------|----------|
+| Concept | Product idea only |
+| Specified | Fully documented |
+| Design | Visual design underway |
+| Development | Being implemented |
+| Testing | Under validation |
+| Released | Production ready |
+| Deprecated | Scheduled for removal |
+| Retired | No longer part of BinderHaven |
 
-DB-022 – Pocket Widget
+---
 
-Flutter Class
+# Product Components
 
-PocketWidget
+## Library
 
-File Name
+Purpose
 
-pocket_widget.dart
+Primary browsing experience.
+
+Status
+
+Development
 
 Documentation
 
-Referenced by DB-022
+05_COMPONENT_LIBRARY.md
 
 ---
 
-# Future Growth
+## Binder
 
-As Digital Binder expands, additional categories may include:
+Purpose
 
-• Marketplace Components
+Represents an individual collection.
 
-• Scanner Components
+Status
 
-• Community Components
+Development
 
-• AI Components
+Documentation
 
-• Premium Theme Components
+05_COMPONENT_LIBRARY.md
 
-• Seasonal Components
+---
 
-Component identifiers should continue sequentially without modifying existing entries.
+## Binder Cover
+
+Purpose
+
+Visual identity of a binder.
+
+Status
+
+Development
+
+---
+
+## Binder Metadata
+
+Purpose
+
+Collection information displayed alongside the binder.
+
+Status
+
+Development
+
+---
+
+## Binder Page
+
+Purpose
+
+Displays one page of the collection.
+
+Status
+
+Concept
+
+---
+
+## Pocket Grid
+
+Purpose
+
+Organizes pockets according to binder layout.
+
+Status
+
+Concept
+
+---
+
+## Pocket
+
+Purpose
+
+Represents one card location.
+
+Status
+
+Concept
+
+---
+
+## Trading Card
+
+Purpose
+
+Displays an individual card.
+
+Status
+
+Concept
+
+---
+
+## Card Details
+
+Purpose
+
+Expanded information about a card.
+
+Status
+
+Concept
+
+---
+
+## Progress
+
+Purpose
+
+Displays collection completion.
+
+Status
+
+Development
+
+---
+
+## Search
+
+Purpose
+
+Allows collectors to quickly locate collections or cards.
+
+Status
+
+Concept
+
+---
+
+## Scanner
+
+Purpose
+
+Imports physical cards into BinderHaven.
+
+Status
+
+Concept
+
+---
+
+## Dialog
+
+Purpose
+
+Focused user interactions.
+
+Status
+
+Concept
+
+---
+
+## Navigation
+
+Purpose
+
+Primary navigation throughout the application.
+
+Status
+
+Development
+
+---
+
+## Wallpaper
+
+Purpose
+
+Personalizes the library experience.
+
+Status
+
+Concept
+
+---
+
+## Settings
+
+Purpose
+
+Application customization.
+
+Status
+
+Concept
+
+---
+
+## Statistics
+
+Purpose
+
+Displays meaningful collection insights.
+
+Status
+
+Concept
+
+---
+
+# Future Components
+
+The following components remain under consideration.
+
+Their presence here does not guarantee implementation.
+
+Achievement System
+
+Wishlist
+
+Trade Binder
+
+Marketplace
+
+Profiles
+
+Friends
+
+Collection Sharing
+
+Community Feed
+
+Cloud Sync
+
+AI Assistant
+
+Seasonal Themes
+
+Premium Binder Themes
+
+---
+
+# Component Relationships
+
+Components should compose larger experiences.
+
+Example
+
+Library
+
+↓
+
+Binder
+
+↓
+
+Binder Page
+
+↓
+
+Pocket Grid
+
+↓
+
+Pocket
+
+↓
+
+Trading Card
+
+↓
+
+Card Details
+
+No component should duplicate the responsibility of another component.
+
+---
+
+# Documentation Requirements
+
+Every component should eventually have:
+
+Purpose
+
+Responsibilities
+
+Inputs
+
+Outputs
+
+States
+
+Interactions
+
+Accessibility Requirements
+
+Animation Behavior
+
+Future Enhancements
+
+Acceptance Criteria
+
+---
+
+# Component Ownership
+
+Each component should have one clearly defined responsibility.
+
+When adding a new component ask:
+
+Can an existing component solve this problem?
+
+If yes...
+
+Reuse it.
+
+If no...
+
+Create a new component and document it before implementation.
+
+---
+
+# Design Principles
+
+Every component should be:
+
+Reusable
+
+Accessible
+
+Responsive
+
+Consistent
+
+Theme Aware
+
+Performance Focused
+
+Easy to Understand
+
+Easy to Maintain
+
+---
+
+# Evolution Policy
+
+Components should continuously improve.
+
+Visual refinement.
+
+Animation.
+
+Accessibility.
+
+Customization.
+
+Performance.
+
+New functionality.
+
+Evolution should strengthen existing components rather than replace them whenever practical.
 
 ---
 
 # Final Principle
 
-Every reusable interface element should have a permanent identity.
+The Component Catalog is BinderHaven's inventory of building blocks.
 
-A stable component catalog improves communication, encourages reuse, reduces duplication, and allows Digital Binder to scale while maintaining consistency.
+It is not a Flutter widget list.
 
-If a component exists, it belongs in this catalog.
+It is not a design document.
 
-If it is not in this catalog, it does not yet exist.
+It is the authoritative record of every product component that collectively creates the BinderHaven experience.

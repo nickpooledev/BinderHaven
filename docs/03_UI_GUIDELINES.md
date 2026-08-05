@@ -1,114 +1,98 @@
-# Digital Binder
+# BinderHaven
 
 # User Interface & Experience Guidelines
 
-Version 1.0
+Version: 2.0  
+Status: Active  
+Owner: Poole Labs
 
 ---
 
 # Purpose
 
-This document defines the visual language, interaction philosophy, and user experience standards of Digital Binder.
+This document defines the interaction philosophy, usability standards, and user experience principles of BinderHaven.
 
-Every screen, animation, icon, button, transition, and interaction should follow these guidelines.
+While the Design System defines how BinderHaven looks, this document defines how it should behave.
 
-Consistency creates familiarity.
+Every screen, workflow, interaction, transition, and animation should follow these guidelines.
 
-Familiarity creates comfort.
+Consistency builds confidence.
 
-Comfort creates an enjoyable collecting experience.
-
----
-
-# Design Philosophy
-
-Digital Binder should never feel like productivity software.
-
-It should feel like entering a private collection room.
-
-Warm.
-
-Comfortable.
-
-Premium.
-
-Personal.
-
-Collectors should want to spend time inside the application.
-
-The interface should quietly disappear, allowing the collection itself to become the focus.
+Confidence allows collectors to focus on their collections instead of learning the interface.
 
 ---
 
-# Design Keywords
+# User Experience Philosophy
 
-Every screen should be:
+BinderHaven should never feel like productivity software.
 
-• Elegant
+It should never feel like inventory software.
 
-• Premium
+It should never feel like a spreadsheet.
 
-• Minimal
+Instead, BinderHaven should feel like a premium application created specifically for collectors.
 
-• Warm
+The interface should quietly disappear so the collection becomes the center of attention.
 
-• Calm
+Every interaction should reinforce quality.
 
-• Purposeful
-
-• Fast
-
-• Responsive
-
-• Tactile
-
-• Collector Focused
-
-Avoid:
-
-• Corporate
-
-• Busy
-
-• Loud
-
-• Flashy
-
-• Cluttered
-
-• Overly technical
+Every screen should encourage exploration.
 
 ---
 
-# Color Philosophy
+# Experience Keywords
 
-Color should support the cards.
+Every screen should feel:
 
-Not compete with them.
+- Premium
+- Calm
+- Elegant
+- Minimal
+- Intentional
+- Responsive
+- Comfortable
+- Personal
+- Collector Focused
 
-Backgrounds should remain neutral.
+Avoid interfaces that feel:
 
-Card artwork should always become the focal point.
-
-Dark mode should feel luxurious rather than simply black.
-
-Light mode should feel clean rather than sterile.
+- Corporate
+- Technical
+- Busy
+- Loud
+- Cluttered
+- Overwhelming
+- Distracting
 
 ---
 
-# Typography
+# Interface Philosophy
 
-Typography should communicate hierarchy without distraction.
+The interface exists to support collecting.
 
-Large headings should establish location.
+It should never compete with the collection.
 
-Medium headings organize content.
+Controls should remain visible when needed.
 
-Body text should remain highly readable.
+Invisible when not.
 
-Numbers should be easy to compare.
+Collectors should spend their time looking at cards—not navigating menus.
 
-Card information should never feel cramped.
+---
+
+# Information Hierarchy
+
+Every screen should establish a clear visual hierarchy.
+
+Priority should always be:
+
+1. Collection
+2. Cards
+3. User actions
+4. Supporting information
+5. Statistics
+
+Statistics should support collecting—not dominate it.
 
 ---
 
@@ -116,219 +100,217 @@ Card information should never feel cramped.
 
 Whitespace is intentional.
 
-Crowded interfaces reduce perceived quality.
+Spacing communicates quality.
 
-Every element should have room to breathe.
+Every interface element should have room to breathe.
 
-The collector should never feel overwhelmed.
+Avoid visual noise.
+
+Avoid unnecessary borders.
+
+Avoid excessive decoration.
 
 ---
 
 # Navigation Philosophy
 
-The user should always know:
+Collectors should always know:
 
-• Where they are
-
-• What binder they are viewing
-
-• What page they are on
-
-• What action is currently active
+- Where they are
+- What collection they are viewing
+- What action is available
+- How to return
 
 Navigation should never require explanation.
 
----
-
-# Bookshelf Experience
-
-The bookshelf is the application's home.
-
-It should feel like walking into a personal library.
-
-Binders should appear organized.
-
-Shelf spacing should feel realistic.
-
-Lighting should feel natural.
-
-Scrolling should remain smooth regardless of library size.
-
----
-
-# Binder Experience
-
-Opening a binder should feel satisfying.
-
-Animation sequence:
-
-1. Select binder
-
-2. Binder slides forward
-
-3. Binder rotates naturally
-
-4. Opens smoothly
-
-5. Displays current page
-
-Closing the binder reverses the sequence.
-
-Animations should never exceed approximately half a second.
-
----
-
-# Page Turning
-
-Pages should behave like physical pages.
-
-Corners should flex.
-
-Movement should have slight weight.
-
-Pages should never instantly switch.
-
-Turning multiple pages should remain responsive.
-
----
-
-# Card Presentation
-
-Cards are the heroes.
-
-Cards should occupy the majority of the available space.
-
-Missing cards should remain recognizable while clearly appearing unavailable.
-
-Card artwork should never be obstructed by unnecessary interface elements.
+The shortest path should usually be the best path.
 
 ---
 
 # Motion Philosophy
 
-Motion should communicate.
+Motion communicates.
 
-Never decorate.
+Motion should never exist purely for decoration.
 
-Animations should explain:
+Animations should reinforce:
 
-Movement
+- Focus
+- Hierarchy
+- Continuity
+- Physicality
 
-Hierarchy
-
-Depth
-
-Ownership
-
-Every animation should have purpose.
+Every animation should have a purpose.
 
 ---
 
-# Sound Philosophy
+# Animation Principles
 
-If enabled.
+Animations should feel smooth and deliberate.
 
-Audio should remain subtle.
+General timing:
 
-Examples:
+Small interactions
 
-Soft page turns.
+150–200ms
 
-Binder opening.
+Standard transitions
 
-Gentle completion chimes.
+200–300ms
 
-No loud effects.
+Large transitions
 
-No arcade sounds.
+300–500ms
 
-No excessive celebration.
+Long animations should only exist when they contribute to the emotional experience.
+
+Collectors should never wait simply because an animation is playing.
+
+---
+
+# Binder Interactions
+
+The binder is the centerpiece of BinderHaven.
+
+Interactions involving binders should feel meaningful.
+
+Examples include:
+
+- Selecting a binder
+- Opening a binder
+- Closing a binder
+- Returning to the library
+
+The exact presentation may evolve over time, but every interaction should reinforce the feeling of interacting with a real collection.
+
+---
+
+# Card Presentation
+
+Cards are always the hero.
+
+Artwork should remain unobstructed.
+
+Interface controls should never compete with card artwork.
+
+Missing cards should remain recognizable while clearly communicating they are not yet owned.
+
+Completion should feel rewarding without becoming distracting.
+
+---
+
+# Touch Experience
+
+Touch targets should remain comfortable.
+
+Interactive elements should never require precise taps.
+
+Scrolling should remain fluid regardless of collection size.
+
+Gestures should feel natural.
 
 ---
 
 # Haptic Feedback
 
-Mobile devices should use haptics sparingly.
+Where supported, haptic feedback should reinforce meaningful actions.
 
-Examples:
+Appropriate examples include:
 
-Completing a page.
+- Opening a binder
+- Completing a page
+- Completing a collection
+- Successfully adding a card
 
-Completing a set.
+Haptics should never become repetitive or distracting.
 
-Opening a binder.
+---
 
-Adding a card.
+# Sound
 
-Haptics should reinforce accomplishments.
+Audio should always remain optional.
+
+If enabled, sounds should reinforce the premium nature of the application.
+
+Examples include:
+
+- Soft binder movement
+- Gentle page turns
+- Collection completion
+
+Avoid loud or arcade-style sound effects.
 
 ---
 
 # Accessibility
 
-Digital Binder should be enjoyable for everyone.
+BinderHaven should remain usable for as many collectors as possible.
 
-Support includes:
+Support should include:
 
-Large text
+- Dynamic text sizes
+- Screen readers
+- High contrast
+- Reduced motion
+- Colorblind-friendly indicators
+- Comfortable touch targets
 
-Colorblind support
-
-Reduced motion
-
-Screen readers
-
-High contrast
-
-Left-handed accessibility
-
-Offline usability
+Accessibility is a product requirement—not an optional enhancement.
 
 ---
 
-# Performance Expectations
+# Performance
 
-Animations should remain smooth.
+The interface should always feel responsive.
 
-Images should load instantly after caching.
+Collectors should never question whether the application received their input.
+
+Scrolling should remain smooth.
 
 Searching should feel immediate.
 
-Opening binders should never noticeably pause.
+Transitions should feel intentional without introducing delay.
 
-Every interaction should feel premium.
+Performance contributes directly to the perception of quality.
 
 ---
 
 # Emotional Goals
 
-When using Digital Binder, collectors should feel:
+Every interaction should reinforce one or more of these emotions:
 
-Relaxed.
+- Pride
+- Relaxation
+- Nostalgia
+- Satisfaction
+- Curiosity
+- Motivation
 
-Proud.
-
-Excited.
-
-Motivated.
-
-Nostalgic.
-
-Inspired.
-
-The application should become somewhere collectors enjoy spending time.
+BinderHaven should become an application collectors open because they enjoy spending time with their collections.
 
 ---
 
-# User Experience Rule
+# User Experience Test
 
-Every screen should answer one question:
+Every screen should satisfy this question:
 
-"Would a collector enjoy spending five minutes here without doing anything productive?"
+> "Would a collector enjoy spending time here even if they were not actively organizing cards?"
 
-If the answer is yes...
+If the answer is no, the experience should be reconsidered.
 
-The design is successful.
+---
+
+# Decision Filter
+
+Before implementing any interface change, ask:
+
+- Does this reduce friction?
+- Does this improve clarity?
+- Does this strengthen the collecting experience?
+- Does this feel premium?
+- Does this keep the collection as the primary focus?
+
+If the answer is no, reconsider the design.
 
 ---
 
@@ -338,6 +320,6 @@ The interface exists to showcase the collection.
 
 Never itself.
 
-Collectors should remember the cards.
+Collectors should remember their collections.
 
-Not the buttons.
+Not the interface.

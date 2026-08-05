@@ -1,182 +1,197 @@
-# Digital Binder
+# BinderHaven
 
-# Product Specification
+# Product Bible
 
-Version 1.0
+Version: 2.0  
+Status: Active  
+Owner: Poole Labs
 
 ---
 
-## Purpose
+# Purpose
 
-This document defines the functional behavior of Digital Binder.
+This document defines **what BinderHaven is**.
 
-Where the Vision & Design Bible explains **why** the product exists, this specification explains **what** the product should do.
+While the Vision document explains *why* the product exists, the Product Bible defines the application's capabilities, target audience, feature set, and long-term direction.
 
-Every feature implemented within the application should trace back to this document.
+This document should evolve throughout the lifetime of the project.
 
-This specification is intended to evolve throughout the lifetime of the product.
-
-New features, workflows, and systems should be documented here before development begins.
+Features should be documented here before implementation begins.
 
 ---
 
 # Product Overview
 
-Digital Binder is a premium mobile application designed to recreate the experience of owning physical trading card binders while providing powerful digital collection management.
+BinderHaven is a premium digital collection application built specifically for trading card collectors.
 
-The application is built around one central philosophy:
+Its purpose is to recreate the enjoyment of owning physical binders while providing the convenience and power of modern software.
 
-> The binder is the product.
+BinderHaven is designed for collectors first.
 
-Every feature should reinforce the feeling of walking into a personal collection room filled with beautifully organized binders.
+It is not an inventory application.
 
-The application should feel elegant, responsive, enjoyable, and effortless to use.
+It is not a pricing application.
 
-Digital Binder should become the application collectors open because they *want* to browse their collections—not simply because they need information.
+It is not a marketplace.
+
+Those capabilities may exist, but they are secondary to the collecting experience.
+
+The binder remains the centerpiece of the application.
+
+Every feature should strengthen that experience.
 
 ---
 
 # Product Goals
 
-The primary goals of Digital Binder are:
+BinderHaven exists to:
 
-• Recreate the emotional experience of physical binders.
-
-• Make tracking collections effortless.
-
-• Provide world-class organization.
-
-• Encourage completing collections.
-
-• Celebrate milestones.
-
-• Present artwork beautifully.
-
-• Work offline whenever possible.
-
-• Support every collector equally, from beginners to lifelong enthusiasts.
+- Recreate the emotional experience of collecting.
+- Make organizing collections effortless.
+- Encourage completing collections.
+- Celebrate collecting milestones.
+- Present artwork beautifully.
+- Reduce reliance on spreadsheets.
+- Work offline whenever possible.
+- Support collectors of every experience level.
 
 ---
 
-# Product Success Criteria
+# Success Criteria
 
-Digital Binder succeeds when collectors:
+BinderHaven succeeds when collectors:
 
-• Browse collections for enjoyment.
+- Browse their collections for enjoyment.
+- Complete more collections.
+- Spend less time managing data.
+- Feel emotionally connected to their binders.
+- Recommend BinderHaven to other collectors.
 
-• Complete more sets.
-
-• Spend less time managing spreadsheets.
-
-• Feel emotionally connected to their collection.
-
-• Recommend the application to other collectors.
-
-Success is measured by engagement and enjoyment—not by time spent managing data.
-# Collector Personas
-
-## The Master Set Collector
-
-Owns complete or nearly complete official sets.
-
-Primary motivation:
-
-Completing every card.
-
-Needs:
-
-• Missing card tracking
-
-• Progress visualization
-
-• Binder completion
-
-• Variant tracking
+Success is measured by enjoyment, retention, and collector satisfaction—not by data entry.
 
 ---
 
-## The Artwork Collector
+# Target Collectors
 
-Collects based on artwork.
+## Master Set Collector
 
-Needs:
+Motivation
 
-• Illustrator search
+Complete every card within an official set.
 
-• Favorite artwork binder
+Needs
 
-• High-quality images
-
----
-
-## The Casual Collector
-
-Collects favorite Pokémon.
-
-Needs:
-
-• Easy organization
-
-• Beautiful browsing
-
-• Simple collection tracking
+- Missing card tracking
+- Completion percentage
+- Variant tracking
+- Progress visualization
 
 ---
 
-## The Convention Collector
+## Artwork Collector
 
-Frequently buys, sells, and trades cards.
+Motivation
 
-Needs:
+Collect favorite artwork regardless of rarity.
 
-• Trade binders
+Needs
 
-• Wishlist
+- Illustrator search
+- Favorite artwork collections
+- Beautiful card presentation
 
-• Fast searching
+---
 
-• Offline access
+## Casual Collector
+
+Motivation
+
+Collect favorite Pokémon, characters, or themes.
+
+Needs
+
+- Simple organization
+- Beautiful browsing
+- Easy collection management
+
+---
+
+## Competitive Collector
+
+Motivation
+
+Organize playable cards and tournament decks.
+
+Needs
+
+- Quick searching
+- Deck organization
+- Card availability
+
+---
+
+## Convention Collector
+
+Motivation
+
+Buy, sell, and trade cards efficiently.
+
+Needs
+
+- Trade binders
+- Wishlist
+- Offline access
+- Fast searching
+
+---
+
 # Product Pillars
 
-Every feature should strengthen one or more of these pillars.
+Every feature should strengthen one or more of these principles.
 
-## Digital Binder Experience
+## Collector Experience
 
-The application should always feel like a real binder.
+The application should always feel like a collector's companion.
 
-Never like a spreadsheet.
-
----
-
-## Speed
-
-Every interaction should feel immediate.
-
-Searching.
-
-Opening binders.
-
-Turning pages.
-
-Everything.
+Never like accounting software.
 
 ---
 
 ## Simplicity
 
-No feature should require unnecessary taps.
+Complexity should never be exposed unless necessary.
 
-Simple experiences are preferred over feature-rich complexity.
+The simplest workflow should always win.
+
+---
+
+## Performance
+
+The application should feel immediate.
+
+Opening binders.
+
+Turning pages.
+
+Searching.
+
+Filtering.
+
+Animations.
+
+Everything should feel responsive.
 
 ---
 
 ## Beauty
 
-Collectors should enjoy simply looking at the application.
-
-Animations should communicate quality.
+Collectors should enjoy simply looking at BinderHaven.
 
 Artwork should remain the focus.
+
+Animations should reinforce quality.
+
+The interface should feel premium without becoming distracting.
 
 ---
 
@@ -184,70 +199,155 @@ Artwork should remain the focus.
 
 Collectors own their data.
 
-Offline access should always be prioritized.
+Offline functionality should remain a priority.
 
-The application should continue functioning without internet access whenever possible.
-Collection Management
+Internet connectivity should enhance the experience—not be required for it.
 
-Bookshelf
+---
 
-Digital Binders
+# Current Core Features
 
-Master Sets
+The following capabilities define BinderHaven today.
 
-Custom Binders
+## Collection Management
 
-Wishlist
+- Digital binders
+- Multiple games
+- Collection organization
+- Favorites
+- Progress tracking
 
-Favorites
+---
 
-Trade Binder
+## Binder Management
 
-Duplicates
+- Create binders
+- Multiple binder styles
+- Binder customization
+- Collection progress
 
-Reverse Holos
+---
 
-Master Balls
+## Collection Tracking
 
-Poké Balls
+- Missing cards
+- Owned cards
+- Completion percentages
+- Variant support
 
-Notes
+---
 
-Tags
+## Search
 
-Statistics
+- Fast searching
+- Collection filtering
+- Set browsing
 
-Achievements
+---
 
-Collector Levels
+# Future Product Backlog
 
-Trophy Cabinet
+The following ideas represent potential future capabilities.
 
-Collection Room
+Their inclusion here does **not** guarantee implementation.
 
-Cloud Sync
+They exist to capture long-term product direction.
 
-Friends
+## Collection Features
 
-Marketplace Links
+- Wishlist
+- Trade Binder
+- Duplicate Tracking
+- Reverse Holo Tracking
+- Master Ball Tracking
+- Poké Ball Tracking
+- Personal Notes
+- Tags
 
-Scanner
+---
 
-AI Assistant
+## Achievement System
+
+- Achievements
+- Collector Levels
+- Trophy Cabinet
+- Collection Milestones
+
+---
+
+## Community
+
+- Friends
+- Collection Sharing
+- Public Profiles
+
+---
+
+## Marketplace Integration
+
+- Marketplace Links
+- Purchase Assistance
+- Price References
+
+---
+
+## Scanner
+
+- Card scanning
+- Automatic recognition
+- Collection import
+
+---
+
+## Artificial Intelligence
+
+Potential future AI capabilities include:
+
+- Collection insights
+- Missing card recommendations
+- Smart organization
+- Duplicate analysis
+- Personalized collecting suggestions
+
+---
+
+## Cloud Features
+
+Potential future capabilities include:
+
+- Cloud synchronization
+- Multi-device support
+- Backup and restore
+
+---
+
+# Feature Approval Policy
+
+Ideas listed in the Future Product Backlog are intentionally aspirational.
+
+A feature should only move into the Current Core Features section after:
+
+- Product review
+- User experience review
+- Technical evaluation
+- Documentation approval
+
+This allows BinderHaven to evolve without treating every idea as a product commitment.
+
+---
+
 # Living Document
 
-This specification represents the current vision of Digital Binder.
+This Product Bible represents the current understanding of BinderHaven.
 
-As the application evolves, this document should evolve with it.
+Features will evolve.
 
-Features may be added.
+Priorities will change.
 
-Features may be removed.
+New opportunities will emerge.
 
-Features may change.
+However, every change should continue supporting the Vision of BinderHaven.
 
-However, every revision should continue supporting the product vision defined within the Vision & Design Bible.
+The objective is not to build the largest collection management application.
 
-The objective is not to build the largest collection application.
-
-The objective is to build the best collection experience.
+The objective is to build the most enjoyable digital collecting experience.

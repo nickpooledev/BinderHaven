@@ -1,391 +1,441 @@
-# Digital Binder
+# BinderHaven
 
 # Design System
 
-Version 1.0
+Version: 0.9 (Foundation Draft)
+Status: Active Development
+Owner: Poole Labs
 
 ---
 
 # Purpose
 
-The Digital Binder Design System establishes the visual foundation of the application.
+The BinderHaven Design System defines the visual, interactive, and emotional language of the application.
 
-Its purpose is to ensure every screen feels like it belongs to the same product.
+It exists to ensure every screen, animation, interaction, and component feels like it belongs to the same product.
 
-Every component should appear intentional, consistent, and premium.
+The Design System is the visual constitution of BinderHaven.
 
-The Design System is not static.
+Whenever a design decision must be made, this document serves as the source of truth.
 
-It will evolve as Digital Binder grows.
+---
 
-Every new component should follow these standards before becoming part of the application.
+# Mission
+
+BinderHaven is not trying to become another collection tracker.
+
+BinderHaven exists to create the most enjoyable digital collecting experience possible.
+
+The application should feel premium, memorable, and uniquely BinderHaven.
+
+Collectors should recognize the application not because of a logo, but because of the quality and consistency of its experience.
 
 ---
 
 # Design Philosophy
 
-The interface should disappear.
+The interface exists to support the collection.
 
-The collection should become the focus.
+Never compete with it.
 
-Collectors should notice:
+Collectors should spend their time enjoying:
 
-The cards.
+• Their binders
 
-The binders.
+• Their cards
 
-The artwork.
+• Their progress
 
-Not the buttons.
+• Their accomplishments
 
-Not the menus.
+The interface should quietly guide the experience while remaining visually confident.
 
-Not the interface.
+---
 
-The interface exists to support the collection—not compete with it.
+# Design Pillars
+
+Every visual decision should reinforce these principles.
+
+## Premium
+
+BinderHaven should feel carefully crafted.
+
+Not flashy.
+
+Not cluttered.
+
+Premium software is remembered for its refinement.
+
+---
+
+## Collector First
+
+Every feature exists to improve the collecting experience.
+
+The collector always comes before statistics, monetization, or complexity.
+
+---
+
+## Physical Inspiration
+
+BinderHaven draws inspiration from premium physical binders.
+
+It should never become constrained by them.
+
+Digital experiences should improve upon physical limitations while preserving emotional familiarity.
+
+---
+
+## Personal Ownership
+
+Collectors should feel ownership over their library.
+
+Customization should reinforce identity.
+
+The application should encourage collectors to make their library feel personal.
+
+---
+
+## Delight
+
+Every interaction should provide subtle satisfaction.
+
+The goal is not entertainment.
+
+The goal is enjoyment.
+
+---
+
+## Performance
+
+Nothing should sacrifice responsiveness.
+
+Premium experiences are fast experiences.
+
+---
+
+## Timelessness
+
+Avoid short-lived design trends.
+
+Design BinderHaven so it still feels premium years from now.
+
+---
+
+# Brand Identity
+
+BinderHaven should eventually develop its own recognizable visual identity.
+
+This identity should remain subtle.
+
+Possible future implementations include:
+
+• Monogram
+
+• Embossed emblem
+
+• Premium clasp mark
+
+• Collector seal
+
+The identity should never distract from the collection itself.
 
 ---
 
 # Visual Identity
 
-Digital Binder should feel:
+BinderHaven should feel:
 
 • Premium
 
 • Modern
 
-• Warm
+• Comfortable
 
-• Calm
+• Collector Focused
 
 • Elegant
 
-• Organized
+• Purposeful
 
-• Timeless
+• Confident
 
-Avoid:
+Avoid interfaces that feel:
 
 • Corporate
 
-• Cold
-
-• Overly colorful
+• Generic
 
 • Busy
 
-• Cluttered
+• Cheap
 
 • Aggressive
 
----
-
-# Color System
-
-The application should primarily use neutral colors.
-
-Cards provide the color.
-
-The interface provides the frame.
-
-Primary Accent
-
-Reserved for:
-
-Buttons
-
-Progress
-
-Selection
-
-Important actions
-
-Success
-
-Collection completion
-
-Achievements
-
-Confirmation
-
-Warning
-
-Temporary attention only.
-
-Error
-
-Used sparingly.
-
-Background
-
-Soft neutral tones.
-
-Dark Mode
-
-Rich charcoal.
-
-Never pure black.
-
-Light Mode
-
-Soft off-white.
-
-Never bright white.
+• Overly playful
 
 ---
 
-# Typography
+# Color Philosophy
 
-Hierarchy:
+Color should support hierarchy.
 
-Display
+The cards provide excitement.
 
-Page Title
+The interface provides structure.
 
-Section Header
+Dark mode should feel rich rather than black.
 
-Body
+Light mode should feel warm rather than sterile.
 
-Caption
+Accent colors should communicate interaction rather than decoration.
 
-Metadata
+---
 
-Typography should emphasize readability.
+# Typography Philosophy
+
+Typography should communicate hierarchy.
 
 Never decoration.
 
----
+Every piece of text should have purpose.
 
-# Spacing System
+Large text establishes location.
 
-Use an 8-point spacing system.
+Medium text organizes.
 
-Examples:
-
-4 px
-
-8 px
-
-16 px
-
-24 px
-
-32 px
-
-48 px
-
-64 px
-
-Consistent spacing creates visual rhythm.
-
----
-
-# Corner Radius
-
-Small
-
-Medium
-
-Large
-
-Extra Large
-
-Cards and binders should feel soft.
-
-Avoid sharp corners.
-
----
-
-# Elevation
-
-Elevation communicates depth.
-
-Not decoration.
-
-Only interactive elements should cast noticeable shadows.
-
----
-
-# Icons
-
-Simple.
-
-Rounded.
-
-Consistent stroke weight.
-
-Never overly detailed.
-
----
-
-# Buttons
-
-Primary
-
-Filled
-
-Secondary
-
-Outlined
-
-Tertiary
-
-Text
-
-Danger
-
-Confirmation Required
-
-Buttons should always communicate importance through hierarchy.
-
----
-
-# Cards
-
-Cards should remain the visual hero.
-
-Images should dominate.
+Small text provides context.
 
 Metadata should remain secondary.
 
 ---
 
-# Progress Indicators
+# Progress Philosophy
 
-Progress should feel rewarding.
+Progress is not merely data.
 
-Examples:
+Progress is motivation.
 
-Completion Rings
+Collectors should always understand:
 
-Progress Bars
+• Completion percentage
 
-Binder Spine Ribbons
+• Cards owned
 
-Animated Completion
+• Cards remaining
 
-Progress should celebrate.
+Progress should remain visible throughout the collecting experience.
 
-Not pressure.
-
----
-
-# Motion System
-
-Animations should follow three principles.
-
-Weight
-
-Objects have mass.
-
-Purpose
-
-Every animation explains something.
-
-Speed
-
-Animations should never delay interaction.
+It should celebrate achievement without becoming distracting.
 
 ---
 
-# Standard Animation Durations
+# Layout Philosophy
 
-Quick
+Whitespace communicates quality.
 
-150 ms
+Every element deserves room to breathe.
 
-Normal
+Avoid unnecessary borders.
 
-250 ms
+Avoid unnecessary decoration.
 
-Emphasized
-
-400 ms
-
-Large Scene Transition
-
-600 ms
-
-Consistency matters more than speed.
+Avoid unnecessary complexity.
 
 ---
 
-# Haptic System
+# Motion Philosophy
 
-Light
+Motion explains.
 
-Card selected
+Motion reinforces.
 
-Medium
+Motion delights.
 
-Card added
+Motion should never exist purely for decoration.
 
-Heavy
-
-Master set completed
-
-Success
-
-Achievement unlocked
+Every animation should improve understanding or emotional connection.
 
 ---
 
-# Component Library
+# Signature Moments
 
-Every reusable component should belong here.
+BinderHaven should become known for memorable interactions.
 
-Examples:
+Current signature experiences include:
 
-Bookshelf
+• Turning binder pages
 
-Binder
+• Binder customization
 
-Page
+Future signature experiences may include:
 
-Pocket
+• Opening binders
 
-Card
+• Collection completion
 
-Button
+• Creating binders
 
-Dialog
+These moments should receive extra design attention.
 
-Search Bar
+---
 
-Progress Ring
+# Binder Philosophy
 
-Ribbon
+The binder is the centerpiece of BinderHaven.
 
-Achievement Badge
+Every binder should resemble a premium trading card binder.
 
-Statistic Card
+The default BinderHaven binder should remain clean, timeless, and minimal.
 
-Bottom Navigation
+Future optional themes may draw inspiration from premium manufacturers such as Goat Armor, Vault X, or other partners.
 
-App Bar
+BinderHaven should never rely on licensed branding.
 
-Floating Action Button
+The default experience must always stand on its own.
 
-Each component should eventually receive its own specification.
+---
+
+# Wallpapers
+
+Wallpapers establish atmosphere.
+
+They should never reduce readability.
+
+Initial releases should include curated BinderHaven wallpapers.
+
+Future versions may support user-provided wallpapers.
+
+The interface should remain readable regardless of wallpaper selection.
 
 ---
 
 # Accessibility
 
-Every color combination should maintain strong contrast.
+Accessibility is a core requirement.
 
-Touch targets should remain comfortable.
+BinderHaven should support:
 
-Animations should respect reduced motion preferences.
+• Dynamic text sizes
 
-Nothing should depend solely on color.
+• High contrast
+
+• Screen readers
+
+• Reduced motion
+
+• Comfortable touch targets
+
+Nothing should rely solely on color.
+
+---
+
+# Performance
+
+Performance is part of the design.
+
+Animations should remain smooth.
+
+Scrolling should remain fluid.
+
+Searching should feel immediate.
+
+Collectors should never wait for the interface.
+
+---
+
+# Future Design Tokens
+
+Future versions of this document will define:
+
+• Color palette
+
+• Typography scale
+
+• Spacing system
+
+• Radius system
+
+• Elevation system
+
+• Motion tokens
+
+• Component specifications
+
+• Design assets
+
+• Illustration guidelines
+
+• Iconography
+
+---
+
+# The BinderHaven Test
+
+Every new feature should satisfy these questions.
+
+## Ownership
+
+Does this strengthen the collector's connection to their collection?
+
+---
+
+## Motivation
+
+Does it encourage collecting?
+
+---
+
+## Clarity
+
+Can it be understood immediately?
+
+---
+
+## Beauty
+
+Does it improve the presentation?
+
+---
+
+## Performance
+
+Does it remain responsive?
+
+---
+
+## Simplicity
+
+Is there a simpler solution?
+
+---
+
+## Collector First
+
+Would collectors genuinely enjoy using this feature?
+
+---
+
+If several answers are "No", the feature should be redesigned.
+
+---
+
+# Living Document
+
+This Design System will continue evolving throughout BinderHaven's development.
+
+As new screens, interactions, and components are created, they will be documented here.
+
+The objective is not to document every visual decision immediately.
+
+The objective is to build a consistent, recognizable, and timeless design language.
 
 ---
 
 # Final Principle
 
-Consistency builds trust.
+BinderHaven should never strive to be the application with the most features.
 
-Every screen should feel like it was designed by one team.
+It should strive to be the application collectors enjoy using the most.
 
-Not one hundred individuals.
+If collectors find themselves opening BinderHaven simply to admire, browse, and reconnect with their collection, then the design has achieved its purpose.

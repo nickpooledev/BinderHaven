@@ -1,239 +1,563 @@
-# BinderHaven Engineering Bible
+# BinderHaven
 
-**Version:** 2.0
+# Engineering Bible
 
-**Company:** Poole Labs
-
-**Product:** BinderHaven
-
----
-
-# Mission
-
-BinderHaven is a premium cross-platform collection management application built for serious collectors.
-
-The first release focuses on Pokémon collections, but the architecture is designed to support any collectible category in the future.
-
-The application should feel comparable in quality to modern software such as Apple, Linear, Arc, and Notion.
+Version: 3.0
+Status: Active
+Owner: Poole Labs
 
 ---
 
-# Engineering Philosophy
+# Purpose
 
-Every architectural decision should prioritize:
+The Engineering Bible defines the architectural principles, development standards, coding practices, and engineering philosophy behind BinderHaven.
 
-- Maintainability
-- Scalability
-- Readability
-- Consistency
+It exists to ensure every contribution to the project follows a consistent direction.
+
+This document is the authoritative engineering reference for BinderHaven.
+
+When engineering decisions conflict, this document takes precedence.
+
+---
+
+# Engineering Mission
+
+BinderHaven is being built as a premium cross-platform application for collectors.
+
+Engineering exists to support the product vision.
+
+Not the other way around.
+
+Every technical decision should improve one or more of the following:
+
+• Maintainability
+
+• Scalability
+
+• Performance
+
+• Readability
+
+• Reliability
+
+• Testability
+
+Engineering should enable creativity—not restrict it.
+
+---
+
+# Core Engineering Principles
+
+## Build for Years, Not Weeks
+
+BinderHaven should remain maintainable years from now.
 
 Avoid shortcuts that create technical debt.
 
-The project should remain in a buildable state after every commit.
+Choose long-term clarity over short-term speed.
 
 ---
 
-# Current Folder Structure
+## Product Before Code
 
-```text
+The product experience always comes first.
+
+Architecture exists to support the experience.
+
+Never sacrifice usability simply because something is technically easier.
+
+---
+
+## Simplicity Wins
+
+Simple systems are easier to maintain.
+
+Simple APIs are easier to understand.
+
+Simple code is easier to trust.
+
+When two solutions solve the same problem, choose the simpler one.
+
+---
+
+## Consistency
+
+Consistency is more valuable than cleverness.
+
+The project should feel like it was written by one engineer.
+
+Naming.
+
+Formatting.
+
+Architecture.
+
+Patterns.
+
+Everything should be consistent.
+
+---
+
+## Small Building Blocks
+
+Large systems should be composed of small pieces.
+
+Every class should have one responsibility.
+
+Every widget should solve one problem.
+
+Every file should have a clear purpose.
+
+---
+
+# Architecture
+
+BinderHaven follows a feature-first architecture.
+
+Each feature owns:
+
+• Presentation
+
+• Domain
+
+• Application
+
+• State
+
+Shared functionality belongs in shared modules.
+
+Feature-specific functionality remains within the feature.
+
+---
+
+# Project Structure
+
+```
 lib/
-├── app/
-│   ├── app.dart
-│   ├── core/
-│   ├── features/
-│   ├── shared/
-│   │   └── widgets/
-│   └── theme/
-│       ├── animations.dart
-│       ├── colors.dart
-│       ├── radius.dart
-│       ├── shadows.dart
-│       ├── spacing.dart
-│       ├── theme.dart
-│       └── typography.dart
-│
-└── main.dart
+
+    app/
+
+        core/
+
+        domain/
+
+        features/
+
+        shared/
+
+        state/
+
+        services/
+
+        theme/
+
+    main.dart
 ```
+
+The structure may evolve as BinderHaven grows, but the separation of responsibilities should remain.
 
 ---
 
-# Theme System
+# Layer Responsibilities
 
-The application uses a centralized design token architecture.
+## Presentation
 
-UI code should never hardcode:
+Responsible for:
 
-- Colors
-- Padding
-- Radius
-- Typography
-- Shadows
-- Animation durations
+User interface
 
-Everything should originate from the theme layer.
+User interaction
 
----
+Animations
 
-# Design Tokens
+Navigation
 
-Current token files:
-
-- AppColors
-- AppSpacing
-- AppRadius
-- AppShadows
-- AppAnimations
-- AppTypography
+No business logic.
 
 ---
 
-# Application Bootstrap
+## Domain
 
-Application startup flow:
+Responsible for:
 
-```
-main.dart
-      ↓
-BinderHavenApp
-      ↓
-MaterialApp
-      ↓
-ThemeData
-      ↓
-Application Shell
-```
+Entities
 
-`main.dart` should remain minimal.
+Value Objects
 
----
+Enums
 
-# Shared Widgets
+Business Rules
 
-Reusable UI components belong under:
+Factories
 
-```
-app/shared/widgets/
-```
+Pure Dart.
 
-Feature-specific widgets remain within their respective feature modules.
+No Flutter dependencies.
 
 ---
 
-# Assets
+## Application
+
+Responsible for:
+
+Use Cases
+
+Commands
+
+Queries
+
+Application workflows
+
+Coordinates domain logic.
+
+---
+
+## State
+
+Responsible for:
+
+Application state.
+
+View models.
+
+State notifications.
+
+No business rules.
+
+---
+
+## Services
+
+Responsible for:
+
+Persistence
+
+Networking
+
+Scanning
+
+Cloud
+
+External APIs
+
+Services should remain replaceable.
+
+---
+
+## Shared
+
+Reusable functionality used across multiple features.
+
+Examples:
+
+Widgets
+
+Utilities
+
+Extensions
+
+Formatting
+
+---
+
+## Theme
+
+The single source of truth for visual styling.
+
+No widget should hardcode design values.
+
+---
+
+# Design Token Architecture
+
+BinderHaven follows a centralized design token system.
+
+Widgets should never hardcode:
+
+• Colors
+
+• Typography
+
+• Padding
+
+• Radius
+
+• Elevation
+
+• Animation Durations
+
+• Shadows
+
+Every visual value should originate from the theme layer.
+
+---
+
+# Asset Organization
 
 ```
 assets/
-├── branding/
-├── fonts/
-├── images/
-├── illustrations/
-├── animations/
-└── mockups/
+
+    branding/
+
+    wallpapers/
+
+    logos/
+
+    icons/
+
+    fonts/
+
+    images/
+
+    illustrations/
+
+    animations/
+
+    mockups/
 ```
 
----
+Assets should remain organized by purpose.
 
-# Typography
-
-Primary font:
-
-**Inter**
-
-Registered through `pubspec.yaml`.
-
-All text styles originate from `AppTypography`.
+Never create duplicate assets.
 
 ---
 
-# Color Philosophy
+# Widget Philosophy
 
-Background:
-Near-black
+Widgets should be:
 
-Accent:
-Premium muted gold
+Small
 
-Visual language:
+Composable
 
-- Calm
-- Premium
-- Minimal
+Focused
 
-Avoid loud colors and excessive contrast.
+Reusable
+
+Easy to read
+
+Avoid massive widgets.
+
+Break complex interfaces into smaller components.
 
 ---
 
-# Animations
+# State Management
 
-Animations should feel:
+State should remain predictable.
 
-- Intentional
-- Smooth
-- Premium
+Business rules belong inside the domain layer.
 
-Avoid exaggerated motion.
+UI should react to state.
+
+State should never own business logic.
+
+---
+
+# Navigation
+
+Navigation should remain centralized.
+
+Avoid deeply nested navigation logic.
+
+Screens should focus on presenting content.
+
+---
+
+# Error Handling
+
+Failures should be expected.
+
+Every recoverable error should provide meaningful feedback.
+
+The application should fail gracefully.
+
+Never expose raw exceptions to collectors.
+
+---
+
+# Performance
+
+Performance is a feature.
+
+Every screen should remain responsive.
+
+Prefer lazy loading.
+
+Avoid unnecessary rebuilds.
+
+Cache expensive operations.
+
+Profile before optimizing.
+
+Optimize only where measurements justify it.
+
+---
+
+# Accessibility
+
+Accessibility is an engineering responsibility.
+
+Not a design afterthought.
+
+Support:
+
+Dynamic text
+
+Reduced motion
+
+Screen readers
+
+Comfortable touch targets
+
+High contrast
+
+---
+
+# Testing Philosophy
+
+Every feature should be testable.
+
+Recommended testing pyramid:
+
+Unit Tests
+
+↓
+
+Widget Tests
+
+↓
+
+Integration Tests
+
+Business rules should be tested before user interfaces.
 
 ---
 
 # Coding Standards
 
-- Prefer composition over inheritance.
-- Keep widgets focused on a single responsibility.
-- Avoid magic numbers.
-- Use design tokens.
-- Keep imports organized.
-- Comment only when it adds value.
-- Favor readable code over clever code.
+Prefer composition over inheritance.
+
+Avoid global mutable state.
+
+Avoid magic numbers.
+
+Avoid duplicate logic.
+
+Keep methods short.
+
+Keep files focused.
+
+Use expressive names.
+
+Comment only when the code itself cannot clearly communicate intent.
+
+Readable code is preferred over clever code.
 
 ---
 
 # Git Workflow
 
-Every completed milestone should be:
+Every commit should satisfy the following checklist.
 
-1. Built
-2. Analyzed
-3. Tested
-4. Committed
-5. Pushed
+✓ Builds successfully
 
-Small commits are preferred over large commits.
+✓ Passes static analysis
 
----
+✓ Passes tests
 
-# Sprint 1 Status
+✓ Includes meaningful commit message
 
-Completed:
+✓ Leaves the repository in a releasable state
 
-- Project foundation
-- Branding assets
-- Theme architecture
-- Design tokens
-- Typography system
-- Application bootstrap
-- Shared widget architecture
-
-Sprint 1 is considered complete once typography has been verified.
+Small, focused commits are preferred.
 
 ---
 
-# Sprint 2 Roadmap
+# Pull Request Standards
 
-Sprint 2 focuses on the application shell.
+Every change should answer:
 
-Planned work:
+Why was this change made?
 
-1. Routing architecture
-2. Navigation
-3. Application shell
-4. Native splash transition
-5. Flutter splash animation
-6. Home screen foundation
+What problem does it solve?
 
-No collection features will be implemented until the application shell is complete.
+Does it follow the Design System?
+
+Does it follow the Product Vision?
+
+Does it introduce technical debt?
 
 ---
 
-This document is the authoritative engineering reference for BinderHaven.
+# Documentation Standards
 
-Future development should continue from this document rather than the original Sprint 1 handoff.
+Every significant feature should update:
+
+Product Bible
+
+Design System
+
+Component Library
+
+Engineering Bible
+
+Documentation is part of development.
+
+Not something added afterward.
+
+---
+
+# Decision Framework
+
+When choosing between two engineering approaches, ask:
+
+Does this improve maintainability?
+
+Does this improve readability?
+
+Does this improve the collector's experience?
+
+Will this still make sense one year from now?
+
+If the answer is no, reconsider the approach.
+
+---
+
+# Definition of Done
+
+A feature is considered complete when:
+
+• Requirements are implemented.
+
+• UI matches the Design System.
+
+• Code follows engineering standards.
+
+• Tests pass.
+
+• Flutter Analyze reports zero issues.
+
+• Documentation has been updated.
+
+• The repository remains buildable.
+
+---
+
+# Future Evolution
+
+BinderHaven's architecture is expected to evolve.
+
+Refactoring is encouraged when it improves clarity, maintainability, or performance.
+
+Engineering decisions should strengthen the foundation rather than accumulate complexity.
+
+---
+
+# Final Principle
+
+Great software is not measured by the number of features it contains.
+
+It is measured by how confidently those features can evolve.
+
+Every line of code written for BinderHaven should make tomorrow's development easier than today's.

@@ -1,16 +1,50 @@
-# BinderHaven Brand Guide
+# BinderHaven
 
-**Version:** 1.0  
-**Company:** Poole Labs  
-**Product:** BinderHaven
+# Brand Guide
+
+Version: 2.0
+Status: Active
+Owner: Poole Labs
 
 ---
 
-# Mission
+# Purpose
 
-BinderHaven exists to provide collectors with a premium, elegant, and enjoyable way to organize, explore, and showcase their collections.
+The BinderHaven Brand Guide defines the identity, personality, and visual character of the BinderHaven brand.
 
-Every interaction should feel intentional, polished, and effortless.
+It exists to ensure that every visual asset, marketing image, interface, document, and future partnership presents a consistent identity.
+
+This document defines who BinderHaven is—not how it is implemented.
+
+---
+
+# Brand Mission
+
+BinderHaven exists to create the most enjoyable digital collecting experience possible.
+
+Rather than replacing physical binders, BinderHaven celebrates everything collectors love about them while embracing the advantages of modern software.
+
+Every decision should strengthen the emotional connection between collectors and their collections.
+
+---
+
+# Brand Vision
+
+BinderHaven should become the application collectors immediately think of when they imagine a premium digital binder.
+
+It should be known for:
+
+• Beautiful presentation
+
+• Premium quality
+
+• Thoughtful interactions
+
+• Collector-first design
+
+• Exceptional attention to detail
+
+BinderHaven should feel timeless rather than trendy.
 
 ---
 
@@ -18,186 +52,328 @@ Every interaction should feel intentional, polished, and effortless.
 
 BinderHaven is:
 
-- Premium
-- Professional
-- Calm
-- Minimal
-- Collector-focused
-- Timeless
+• Premium
 
-BinderHaven is **not**:
+• Professional
 
-- Loud
-- Flashy
-- Cartoonish
-- Neon
-- Overly playful
+• Calm
 
----
+• Confident
 
-# Design Philosophy
+• Minimal
 
-The interface should resemble modern desktop software such as:
+• Purposeful
 
-- Apple
-- Linear
-- Arc
-- Notion
+• Collector Focused
 
-Whitespace is a feature—not empty space.
+• Timeless
 
----
+BinderHaven is never:
 
-# Logo
+• Loud
 
-Primary logo:
+• Flashy
 
-```
-assets/branding/logos/binderhaven_primary_logo.png
-```
+• Aggressive
 
-The logo should always appear with generous surrounding space.
+• Cartoonish
 
-Never stretch or distort the logo.
+• Cheap
+
+• Generic
+
+• Overly playful
+
+The application should earn attention through quality—not noise.
 
 ---
 
-# App Icon
+# Brand Values
 
-Master source:
+Every decision should reinforce these values.
 
-```
-assets/branding/icons/app_icon_master_1024.png
-```
+## Craftsmanship
 
-The master icon is the source for all platform icons.
+Every detail matters.
 
----
+Collectors notice quality.
 
-# Splash Screen
-
-Reference artwork:
-
-```
-assets/branding/splash/splash_reference.png
-```
-
-The production splash screen will be recreated entirely in Flutter.
-
-The reference image should never be shown directly during app startup.
+BinderHaven should reward careful attention to detail.
 
 ---
 
-# Color Philosophy
+## Trust
 
-Colors will be centralized in:
+Collectors trust BinderHaven with years of memories and effort.
 
-```
-lib/app/theme/colors.dart
-```
-
-No widget should hardcode color values.
+The application should always feel dependable.
 
 ---
 
-# Typography
+## Ownership
 
-Typography definitions belong in:
+Collections belong to collectors.
 
-```
-lib/app/theme/typography.dart
-```
-
-No widget should hardcode font sizes.
+BinderHaven exists to strengthen that feeling of ownership.
 
 ---
 
-# Spacing
+## Simplicity
 
-Spacing tokens belong in:
+Simple experiences often feel more premium than complicated ones.
 
-```
-lib/app/theme/spacing.dart
-```
-
-Padding and margins should always use design tokens.
+Avoid unnecessary complexity.
 
 ---
 
-# Border Radius
+## Longevity
 
-Border radius values belong in:
+BinderHaven should still feel modern years from now.
 
-```
-lib/app/theme/radius.dart
-```
-
-Rounded corners should remain subtle and consistent.
+Avoid chasing temporary design trends.
 
 ---
 
-# Shadows
+# Brand Position
 
-Shadow definitions belong in:
+BinderHaven occupies the space between:
 
-```
-lib/app/theme/shadows.dart
-```
+Professional collection management
 
-Avoid excessive elevation.
+and
+
+Premium collector experience.
+
+It is neither a spreadsheet nor a game.
+
+It is software built specifically for collectors.
 
 ---
 
-# Animations
+# Visual Identity
 
-Animation values belong in:
+The BinderHaven visual identity should communicate:
 
-```
-lib/app/theme/animations.dart
-```
+• Confidence
+
+• Quality
+
+• Precision
+
+• Calmness
+
+• Warmth
+
+The interface should support the collection rather than compete with it.
+
+Collectors should remember their binders—not the interface.
+
+---
+
+# Product Inspiration
+
+BinderHaven draws inspiration from products that demonstrate exceptional craftsmanship and attention to detail.
+
+Examples include:
+
+• Apple
+
+• Linear
+
+• Arc Browser
+
+• Notion
+
+• Premium trading card binders
+
+These examples inspire principles—not imitation.
+
+BinderHaven should establish its own identity.
+
+---
+
+# Binder Identity
+
+The binder is BinderHaven's signature product object.
+
+Default binders should remain:
+
+• Clean
+
+• Premium
+
+• Timeless
+
+• Understated
+
+Future optional themes may draw inspiration from premium manufacturers such as Goat Armor, Vault X, or future partners.
+
+These themes should always remain optional.
+
+The BinderHaven identity must never depend upon licensed branding.
+
+---
+
+# Signature Brand Element
+
+BinderHaven will eventually develop a subtle visual signature.
+
+This may become:
+
+• A monogram
+
+• An embossed emblem
+
+• A clasp
+
+• A collector's seal
+
+• Another original mark
+
+The identity should reinforce the brand quietly rather than dominate the interface.
+
+The exact implementation remains intentionally undefined until a future brand exploration.
+
+---
+
+# Color Identity
+
+Color should establish hierarchy rather than excitement.
+
+Cards provide visual energy.
+
+The interface provides structure.
+
+The BinderHaven palette should remain restrained, allowing collections to become the primary source of color.
+
+---
+
+# Typography Identity
+
+Typography should communicate confidence.
+
+Readable.
+
+Elegant.
+
+Quiet.
+
+Typography should never become decorative.
+
+---
+
+# Motion Identity
 
 Animations should feel:
 
-- Smooth
-- Slow
-- Intentional
+• Smooth
 
-Never bouncy.
+• Intentional
 
----
+• Physical
 
-# Theme
+• Confident
 
-Application theme configuration belongs in:
+BinderHaven should never rely on exaggerated or playful motion.
 
-```
-lib/app/theme/theme.dart
-```
-
-All visual styling should ultimately originate from the centralized theme.
+Movement should communicate quality.
 
 ---
 
-# Design Tokens
+# Sound Identity
 
-BinderHaven follows a design token architecture.
+If enabled, audio should reinforce the premium nature of the application.
 
-Widgets should never contain hardcoded values for:
+Examples include:
 
-- Colors
-- Padding
-- Margins
-- Radius
-- Shadows
-- Animation durations
-- Typography
+• Soft binder movement
 
-Instead, every value should originate from the centralized design system.
+• Gentle page turns
+
+• Collection completion
+
+Sound should always remain optional.
 
 ---
 
-# Engineering Principle
+# Wallpaper Philosophy
 
-Favor consistency over customization.
+Wallpapers establish atmosphere.
 
-A smaller, coherent design system is preferable to a larger inconsistent one.
+They should support the collector's library without distracting from it.
+
+Initial releases should include curated BinderHaven wallpapers.
+
+Future releases may allow collectors to use their own wallpapers while preserving readability.
+
+---
+
+# Partnerships
+
+BinderHaven welcomes future collaborations with manufacturers, artists, and organizations that align with its values.
+
+Potential partnerships should enhance the experience without replacing the BinderHaven identity.
+
+BinderHaven should always remain recognizable regardless of external partnerships.
+
+---
+
+# Brand Voice
+
+BinderHaven communicates with collectors in a tone that is:
+
+• Helpful
+
+• Respectful
+
+• Knowledgeable
+
+• Encouraging
+
+Avoid exaggerated marketing language.
+
+Avoid unnecessary technical jargon.
+
+Speak like a fellow collector.
+
+---
+
+# Brand Promise
+
+BinderHaven promises to respect the collector.
+
+Every update should improve the experience.
+
+Every interaction should reinforce ownership.
+
+Every detail should reflect craftsmanship.
+
+Every feature should exist because it improves collecting—not because it adds complexity.
+
+---
+
+# Brand Evolution
+
+BinderHaven's visual identity will continue evolving.
+
+Examples include:
+
+• Original emblem
+
+• Premium binder themes
+
+• Seasonal experiences
+
+• Collector collaborations
+
+• Licensed themes
+
+Evolution should strengthen the brand rather than redefine it.
+
+---
+
+# Final Principle
+
+BinderHaven should become recognizable not because it is loud, but because it is unmistakably well crafted.
+
+If a collector can recognize BinderHaven from the quality of its experience alone, then the brand has achieved its purpose.
