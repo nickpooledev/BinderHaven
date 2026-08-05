@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../features/dashboard/presentation/dashboard_page.dart';
+import '../features/library/presentation/pages/library_page.dart';
 import '../features/shell/presentation/shell_page.dart';
 import '../features/splash/presentation/splash_page.dart';
 import 'routes.dart';
@@ -23,9 +23,10 @@ class AppRouter {
           settings: settings,
         );
 
+      // Temporary until we rename AppRoutes.dashboard
       case AppRoutes.dashboard:
         return MaterialPageRoute(
-          builder: (_) => const DashboardPage(),
+          builder: (_) => const LibraryPage(),
           settings: settings,
         );
 
