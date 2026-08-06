@@ -11,7 +11,7 @@ class LibraryBackground extends StatelessWidget {
 
         // Wallpaper
         Image.asset(
-          'assets/images/wallpapers/wallpaper1.png',
+          'assets/images/wallpapers/wallpaper2.jpg',
           fit: BoxFit.cover,
         ),
 
